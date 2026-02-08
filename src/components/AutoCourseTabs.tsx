@@ -24,18 +24,37 @@ import type { Course } from "@/types";
 const ALLOWED_CATEGORIES = [
   "Data Analytics",
   "Data Science",
-  "Ethical Hacking",
+  "Artificial Intelligence",
+  // "Ethical Hacking",
   "Testing",
   "UI/UX",
-  "Game Development",
-  "Artificial Intelligence",
-  "Marketing",
+  // "Game Development",
+  "Full Stack",
+  "AI & Machine Learning",
+  // "Marketing",
   "Cyber Security",
   "Backend",
   "Programming",
   "Mobile Development",
+  
+];
+
+const MOB_ALLOWED_CATEGORIES = [
+  "Data Analytics",
+  "Data Science",
+  // "Artificial Intelligence",
+  // "Ethical Hacking",
+  "Testing",
+  "UI/UX",
+  // "Game Development",
   "Full Stack",
   "AI & Machine Learning",
+  // "Marketing",
+  // "Cyber Security",
+  // "Backend",
+  "Programming",
+  "Mobile Development",
+  
 ];
 
 const AUTO_TAB_DELAY = 4000; // 4s
@@ -45,6 +64,14 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
   /* ================= CATEGORIES ================= */
   const categories = useMemo(() => {
     return ALLOWED_CATEGORIES.filter((category) =>
+      courses.some(
+        (course) => course.category?.trim() === category
+      )
+    );
+  }, [courses]);
+
+  const mobcategories = useMemo(() => {
+    return MOB_ALLOWED_CATEGORIES.filter((category) =>
       courses.some(
         (course) => course.category?.trim() === category
       )
@@ -78,6 +105,30 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
     return () => clearInterval(interval);
   }, [categories]);
 
+  /* ================= MOBILE INITIAL TAB ================= */
+  useEffect(() => {
+    if (mobcategories.length && !activeTab) {
+      setActiveTab(mobcategories[0]);
+    }
+  }, [categories, activeTab]);
+
+  /* ================= MOBILE AUTO TAB ROTATION ================= */
+  useEffect(() => {
+    if (!mobcategories.length) return;
+
+    const interval = setInterval(() => {
+      // ⛔ pause auto switching if user recently interacted
+      if (Date.now() < pauseUntilRef.current) return;
+
+      setActiveTab((prev) => {
+        const index = mobcategories.indexOf(prev);
+        return mobcategories[(index + 1) % mobcategories.length];
+      });
+    }, AUTO_TAB_DELAY);
+
+    return () => clearInterval(interval);
+  }, [mobcategories]);
+
   /* ================= USER TAB CHANGE ================= */
   const handleTabChange = (value: string) => {
     setActiveTab(value);
@@ -99,8 +150,39 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
       onValueChange={handleTabChange}
       className="mt-12"
     >
+{/* ================= MOBILE TABS ================= */}
+{/* ================= MOBILE TABS ================= */}
+<TabsList className="grid grid-cols-2 gap-3 bg-transparent md:hidden h-auto">
+  {mobcategories.map((category) => (
+    <TabsTrigger
+      key={category}
+      value={category}
+      className="p-0 bg-transparent shadow-none"
+    >
+      <span
+        className={`
+          w-full text-center px-4 py-2 rounded-lg
+          text-sm font-medium transition-all
+          ${
+           activeTab === category
+                    ? "bg-accent text-accent-foreground shadow-md"
+                    : "bg-background text-foreground border border-border hover:bg-muted"
+          }
+        `}
+      >
+        {category}
+      </span>
+    </TabsTrigger>
+  ))}
+</TabsList>
+
+
+
+      
       {/* ================= TABS ================= */}
-      <TabsList className="mx-auto flex w-fit flex-wrap gap-3 bg-transparent p-1">
+
+      
+<TabsList className="hidden md:flex mx-auto w-fit flex-wrap gap-3 bg-transparent p-1 mb-10">
         {categories.map((category) => (
           <TabsTrigger
             key={category}
@@ -139,7 +221,7 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
             {filteredCourses.map((course) => (
               <CarouselItem
                 key={course.id}
-                className="basis-full sm:basis-1/2 lg:basis-1/3 mt-20"
+  className="basis-1/2 sm:basis-1/2 lg:basis-1/3 md:mt-12"
               >
                 <CourseCard course={course} />
               </CarouselItem>

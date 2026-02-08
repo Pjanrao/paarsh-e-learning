@@ -160,7 +160,7 @@ export default function Home() {
             {courses.slice(0, 6).map((course) => (
               <CarouselItem
                 key={course.id}
-                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+                className="pl-4 basis-1/2 sm:basis-1/2 lg:basis-1/3"
               >
                 <CourseCard course={course} />
               </CarouselItem>
@@ -182,7 +182,6 @@ export default function Home() {
     </div>
   </div>
 </section>
-{/* ================= WHY CHOOSE US ================= */}
 {/* ================= WHY CHOOSE US ================= */}
 <section
   id="why-choose-us"

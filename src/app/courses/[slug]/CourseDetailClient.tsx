@@ -407,60 +407,7 @@ export default function CourseDetailClient({
       {/* ================= RELATED COURSES (SIDEBAR) ================= */}
       <div className="lg:col-span-4 space-y-6">
 
-        {/* <div className="rounded-2xl border border-border bg-background p-6">
-          <h3 className="text-lg font-headline font-semibold">
-            Related Courses
-          </h3>
-
-          <div className="mt-4 space-y-4">
-            {[
-              {
-                title: "Full Stack Web Development",
-                duration: "6 Months",
-                image: "/full-stack5.png",
-              },
-              {
-                title: "Machine Learning",
-                duration: "5 Months",
-                image: "/machine-learning.png",
-              },
-              {
-                title: "Python for Data Analysis",
-                duration: "3 Months",
-                image: "/python.png",
-              },
-               {
-          title: "Data Analytics",
-          duration: "4 Months",
-          image: "/data-analytics.png",
-        },
-            ].map((course, i) => (
-              <Link
-                key={i}
-                href="/courses"
-                className="group flex gap-4 rounded-xl bg-secondary/50 p-3 hover:bg-secondary transition"
-              >
-                <div className="relative h-16 w-20 rounded-lg overflow-hidden">
-                  <Image
-                    src={course.image}
-                    alt={course.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium group-hover:text-primary">
-                    {course.title}
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    {course.duration}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div> */}
+        
       <div className="sticky top-32">
  <div className="
   w-full
@@ -468,21 +415,23 @@ export default function CourseDetailClient({
   border border-border
   bg-background
   shadow-lg
-  p-6
-">
+  p-6  "style={{
+      backgroundImage: "url('/cta-bg.png')", // 🔁 your bg image
+    }}
+>
 
     {/* Icon */}
     <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 mb-4">
-      <Award className="h-5 w-5 text-primary" />
+      <Award className="h-5 w-5 text-primary text-white" />
     </div>
 
     {/* Title */}
-    <h3 className="text-lg font-headline font-semibold text-foreground">
+    <h3 className="text-lg font-headline font-semibold text-foreground text-white">
       Professional Certification
     </h3>
 
     {/* Subtitle */}
-    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+    <p className="mt-2 text-sm text-muted-foreground leading-relaxed text-white ">
       Get recognized by industry leaders with our
       professional certificate.
     </p>
@@ -720,3 +669,57 @@ export default function CourseDetailClient({
     </main>
   );
 }
+{/* <div className="rounded-2xl border border-border bg-background p-6">
+          <h3 className="text-lg font-headline font-semibold">
+            Related Courses
+          </h3>
+
+          <div className="mt-4 space-y-4">
+            {[
+              {
+                title: "Full Stack Web Development",
+                duration: "6 Months",
+                image: "/full-stack5.png",
+              },
+              {
+                title: "Machine Learning",
+                duration: "5 Months",
+                image: "/machine-learning.png",
+              },
+              {
+                title: "Python for Data Analysis",
+                duration: "3 Months",
+                image: "/python.png",
+              },
+               {
+          title: "Data Analytics",
+          duration: "4 Months",
+          image: "/data-analytics.png",
+        },
+            ].map((course, i) => (
+              <Link
+                key={i}
+                href="/courses"
+                className="group flex gap-4 rounded-xl bg-secondary/50 p-3 hover:bg-secondary transition"
+              >
+                <div className="relative h-16 w-20 rounded-lg overflow-hidden">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <div>
+                  <p className="text-sm font-medium group-hover:text-primary">
+                    {course.title}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {course.duration}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div> */}
