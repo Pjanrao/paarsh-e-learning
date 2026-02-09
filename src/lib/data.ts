@@ -587,26 +587,26 @@ export const courses: Course[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 't1',
-    name: 'Amit Sharma',
+    name: 'Rupali Gaikwad',
     course: 'Full Stack Web Development',
-    quote: 'EduLeap changed my life. The one-to-one mentorship was a game-changer, and I landed my dream job within a month of completing the course!',
-    imageUrl: 'https://picsum.photos/seed/t1/100/100',
+    quote: 'Paarsh E-learning changed my life. The one-to-one mentorship was a game-changer, and I landed my dream job within a month of completing the course!',
+    imageUrl: '/user.png',
     imageHint: 'person smiling'
   },
   {
     id: 't2',
-    name: 'Priya Singh',
-    course: 'Advanced Data Science',
+    name: 'Harshda Ahire',
+    course: 'Data Analyst',
     quote: 'The instructors are industry experts who provide invaluable insights. The placement support is top-notch. Highly recommended!',
-    imageUrl: 'https://picsum.photos/seed/t2/100/100',
+    imageUrl: '/user.png',
     imageHint: 'person portrait'
   },
   {
     id: 't3',
-    name: 'Rahul Verma',
-    course: 'UI/UX Design Fundamentals',
+    name: 'Shivani Deshmukh',
+    course: 'Flutter Developer',
     quote: 'I went from a complete beginner to a confident designer. The hands-on projects and portfolio reviews were incredibly helpful.',
-    imageUrl: 'https://picsum.photos/seed/t3/100/100',
+    imageUrl: '/user.png',
     imageHint: 'professional person'
   },
 ];

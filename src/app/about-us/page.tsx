@@ -479,42 +479,7 @@ viewport={{ once: false, amount: 0.2 }}
         Visionaries Behind <span className="text-[#2f6f7a]">Paarsh E-Learning</span>
       </h2>
     </div>
-
-    {/* FOUNDER CARD */}
-<motion.div
-  className="bg-white rounded-2xl shadow-md p-10 flex flex-col md:flex-row gap-8 items-center mb-14"
-  initial={{ opacity: 0, scale: 0.95 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-viewport={{ once: false, amount: 0.2 }}
-  transition={{ duration: 0.6 }}
->
-      {/* IMAGE */}
-      <div className="w-40 h-40 rounded-full border-4 border-[#6aa7b4] flex items-center justify-center bg-slate-100">
-        <Image
-          src="/founder.png"   // 🔁 replace with real image
-          alt="Founder"
-          width={160}
-          height={160}
-          className="rounded-full object-cover"
-        />
-      </div>
-
-      {/* CONTENT */}
-      <div className="text-center md:text-left">
-        <h3 className="text-2xl font-bold">Kantilal B. Pagare</h3>
-        <p className="text-[#2f6f7a] font-medium mb-4">
-          Founder & Chairman
-        </p>
-
-        <blockquote className="italic text-slate-600 max-w-3xl border-l-4 border-[#2f6f7a] pl-5">
-          “Every legacy begins with a vision and the courage to pursue it.
-          This journey was never just about building a company—it was about
-          creating lasting impact, inspiring growth, and leading with purpose.”
-        </blockquote>
-      </div>
-    </motion.div>
-
-    {/* CEO & CFO */}
+  {/* CEO & CFO */}
 <motion.div
   className="grid md:grid-cols-2 gap-10"
   variants={stagger}
