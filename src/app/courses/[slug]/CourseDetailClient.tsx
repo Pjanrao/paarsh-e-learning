@@ -281,9 +281,7 @@ export default function CourseDetailClient({
     </span>
   </p>
 
-  <Button className="mt-4 w-full" size="lg">
-    Enroll Now
-  </Button>
+  <EnrollWithEnquiryModal courseTitle={course.title} />
 
   <div className="mt-4 space-y-2 text-sm">
     <p className="font-medium">This course includes:</p>
