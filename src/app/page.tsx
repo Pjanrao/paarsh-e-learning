@@ -85,7 +85,7 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative w-full h-[60vh] md:h-[80vh]">
+<section className="relative w-full h-[45vh] sm:h-[65vh] md:h-[80vh]">
           <Carousel
             opts={{ loop: true }}
             plugins={[Autoplay({ delay: 5000 })]}
@@ -94,7 +94,7 @@ export default function Home() {
             <CarouselContent>
               {heroSlides.map((slide) => (
                 <CarouselItem key={slide.id}>
-                  <div className="relative h-[60vh] md:h-[80vh] w-full">
+<div className="relative h-[45vh] sm:h-[65vh] md:h-[80vh] w-full">
                     <Image
                       src={slide.imageUrl}
                       alt={slide.alt}
@@ -103,16 +103,16 @@ export default function Home() {
                       data-ai-hint={slide.imageHint}
                       priority={slide.id === 1}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent md:from-black/70 md:via-black/40" />
+<div className="absolute inset-0 flex flex-col items-center justify-end md:justify-center text-center text-white px-5 pb-12 md:p-4">
                       <div className="max-w-4xl">
-                        <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-lg">
+<h1 className="font-headline font-bold drop-shadow-lg text-2xl sm:text-3xl md:text-6xl leading-snug">
                           {slide.title}
                         </h1>
-                        <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto drop-shadow-md">
+<p className="mt-3 text-sm sm:text-base md:text-xl max-w-md md:max-w-2xl mx-auto drop-shadow-md opacity-90">
                           {slide.subtitle}
                         </p>
-                        <Button asChild className="mt-8" size="lg" variant="default">
+<Button asChild className="mt-6 md:mt-8 px-6 py-5 text-sm md:text-base" size="lg">
                           <Link href="/courses">
                             Explore Courses <ArrowRight className="ml-2" />
                           </Link>
@@ -123,8 +123,8 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious variant="default" className="absolute left-4 top-1/2 -translate-y-1/2" />
-            <CarouselNext variant="default" className="absolute right-4 top-1/2 -translate-y-1/2" />
+           <CarouselPrevious className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2" />
+<CarouselNext className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2" />
           </Carousel>
         </section>
 
