@@ -3,6 +3,39 @@
 import { motion } from "framer-motion";
 import Image from "next/image"
 
+
+import type { Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1], // ✅ easeOut cubic-bezier
+    },
+  },
+};
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.6 },
+  },
+};
+
+const stagger: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+
 // ===== STATIC DATA =====
 const stats = [
   { label: "Websites Developed", value: "2000+" },
@@ -35,8 +68,13 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
 {/* ABOUT HERO – CORE SERVICES + STATS */}
-<section className="py-10 overflow-hidden">
-  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<motion.section
+  className="py-10 overflow-hidden"
+  initial="hidden"
+  whileInView="visible"
+viewport={{ once: false, amount: 0.2 }}
+  variants={fadeUp}
+>  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
     {/* LEFT CONTENT */}
     <div>
@@ -77,45 +115,56 @@ export default function AboutPage() {
     </div>
 
     {/* RIGHT CIRCLE */}
-    <div className="relative flex justify-center group">
+<motion.div
+  className="grid sm:grid-cols-2 gap-6"
+  variants={stagger}
+  initial="hidden"
+  whileInView="visible"
+viewport={{ once: false, amount: 0.2 }}
+>
+  {[
+    {
+      title: "Industry-Relevant Curriculum",
+      desc: "Courses designed as per current IT and industry standards.",
+      icon: "📘",
+    },
+    {
+      title: "Hands-on Training",
+      desc: "Live projects, assignments, and real-world practice.",
+      icon: "🛠️",
+    },
+    {
+      title: "Online & Offline Modes",
+      desc: "Flexible learning options to suit every learner.",
+      icon: "💻",
+    },
+    {
+      title: "Career Support",
+      desc: "Resume building, mock interviews, and placement guidance.",
+      icon: "🚀",
+    },
+  ].map((item) => (
+    <motion.div
+  key={item.title}
+  variants={fadeUp}
+  whileHover={{ y: -6 }}
+  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition border"
+>
+      <div className="text-3xl mb-3">{item.icon}</div>
+      <h3 className="font-semibold text-lg mb-2 text-[#2f6f7a]">
+        {item.title}
+      </h3>
+      <p className="text-sm text-slate-600 leading-relaxed">
+        {item.desc}
+      </p>
+    </motion.div>
+  ))}
 
-      {/* ROTATING BORDER */}
-      <div className="absolute w-[480px] h-[480px] rounded-full border border-[#0b6fa4] animate-spin-slow group-hover:animate-none"></div>
+</motion.div>
 
-      {/* INNER CIRCLE */}
-      <div className="w-[400px] h-[400px] rounded-full bg-white shadow-xl flex flex-col items-center justify-center gap-6 z-10">
-
-        <div className="text-center">
-         <p className="text-[#2f6f7a] font-semibold">Our Offerings</p>
-<h3 className="text-xl font-bold">What We Provide</h3>
-
-        </div>
-
-        <div className="grid grid-cols-2 gap-6 text-center">
-
-        {[
-  { icon: "🎓", title: "Career-Oriented Courses" },
-  { icon: "🧑‍🏫", title: "Expert Trainers" },
-  { icon: "🛠️", title: "Practical Learning" },
-  { icon: "📈", title: "Placement Guidance" },
-].map((item) => (
-  <div key={item.title} className="group/service cursor-pointer">
-    <div className="w-12 h-12 mx-auto rounded-full border border-[#2f6f7a] flex items-center justify-center text-[#2f6f7a] transition-all duration-300 group-hover/service:bg-[#2f6f7a] group-hover/service:text-white group-hover/service:scale-110">
-      {item.icon}
-    </div>
-    <p className="mt-2 text-sm font-medium transition-colors group-hover/service:text-[#2f6f7a] text-center">
-      {item.title}
-    </p>
   </div>
-))}
+</motion.section>
 
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 
 
@@ -139,10 +188,17 @@ export default function AboutPage() {
     From Beginner to Confident Learner
   </h3>
 
-  <div className="space-y-8 pl-6">
-
-    <div className="flex gap-5 items-start">
-      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
+<motion.div
+  className="space-y-8 pl-6"
+  variants={stagger}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+>
+<motion.div
+  className="flex gap-5 items-start"
+  variants={fadeUp}
+>      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
         1
       </div>
       <div>
@@ -151,10 +207,12 @@ export default function AboutPage() {
           Choose structured courses designed for clarity and progression
         </p>
       </div>
-    </div>
+    </motion.div>
 
-    <div className="flex gap-5 items-start">
-      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
+<motion.div
+  className="flex gap-5 items-start"
+  variants={fadeUp}
+>      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
         2
       </div>
       <div>
@@ -163,10 +221,12 @@ export default function AboutPage() {
           Instructor-led sessions with clear explanations and support
         </p>
       </div>
-    </div>
+    </motion.div>
 
-    <div className="flex gap-5 items-start">
-      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
+<motion.div
+  className="flex gap-5 items-start"
+  variants={fadeUp}
+>      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
         3
       </div>
       <div>
@@ -175,10 +235,12 @@ export default function AboutPage() {
           Assignments, quizzes, and hands-on activities
         </p>
       </div>
-    </div>
+    </motion.div>
 
-    <div className="flex gap-5 items-start">
-      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
+<motion.div
+  className="flex gap-5 items-start"
+  variants={fadeUp}
+>      <div className="w-10 h-10 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center font-semibold z-10">
         4
       </div>
       <div>
@@ -187,9 +249,9 @@ export default function AboutPage() {
           Build skills, confidence, and career direction
         </p>
       </div>
-    </div>
+    </motion.div>
 
-  </div>
+  </motion.div>
 </div>
 
 
@@ -342,49 +404,66 @@ export default function AboutPage() {
       </p>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <div className="bg-white p-8 rounded-2xl border hover:shadow-md transition">
-        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
+<motion.div
+  className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+  variants={stagger}
+  initial="hidden"
+  whileInView="visible"
+viewport={{ once: false, amount: 0.2 }}
+>
+<motion.div
+  className="bg-white p-8 rounded-2xl border hover:shadow-md transition"
+  variants={fadeUp}
+  whileHover={{ y: -6 }}
+>        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
           📘
         </div>
         <h4 className="font-semibold mb-2">Concept Clarity</h4>
         <p className="text-sm text-slate-600">
           Strong focus on fundamentals with easy-to-understand explanations.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="bg-white p-8 rounded-2xl border hover:shadow-md transition">
-        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
+<motion.div
+  className="bg-white p-8 rounded-2xl border hover:shadow-md transition"
+  variants={fadeUp}
+  whileHover={{ y: -6 }}
+>        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
           🧑‍🏫
         </div>
         <h4 className="font-semibold mb-2">Expert Guidance</h4>
         <p className="text-sm text-slate-600">
           Learn from experienced instructors who guide you at every step.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="bg-white p-8 rounded-2xl border hover:shadow-md transition">
-        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
+<motion.div
+  className="bg-white p-8 rounded-2xl border hover:shadow-md transition"
+  variants={fadeUp}
+  whileHover={{ y: -6 }}
+>        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
           🛠️
         </div>
         <h4 className="font-semibold mb-2">Practice & Assessment</h4>
         <p className="text-sm text-slate-600">
           Assignments, quizzes, and exercises to reinforce learning.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="bg-white p-8 rounded-2xl border hover:shadow-md transition">
-        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
+<motion.div
+  className="bg-white p-8 rounded-2xl border hover:shadow-md transition"
+  variants={fadeUp}
+  whileHover={{ y: -6 }}
+>        <div className="w-12 h-12 rounded-full bg-[#2f6f7a] text-white flex items-center justify-center text-lg mb-5">
           🎯
         </div>
         <h4 className="font-semibold mb-2">Career Readiness</h4>
         <p className="text-sm text-slate-600">
           Gain confidence, skills, and direction for academic and career growth.
         </p>
-      </div>
+      </motion.div>
 
-    </div>
+    </motion.div>
   </div>
 </section>
 {/* LEADERSHIP & VISIONARIES */}
@@ -402,8 +481,13 @@ export default function AboutPage() {
     </div>
 
     {/* FOUNDER CARD */}
-    <div className="bg-white rounded-2xl shadow-md p-10 flex flex-col md:flex-row gap-8 items-center mb-14">
-
+<motion.div
+  className="bg-white rounded-2xl shadow-md p-10 flex flex-col md:flex-row gap-8 items-center mb-14"
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+viewport={{ once: false, amount: 0.2 }}
+  transition={{ duration: 0.6 }}
+>
       {/* IMAGE */}
       <div className="w-40 h-40 rounded-full border-4 border-[#6aa7b4] flex items-center justify-center bg-slate-100">
         <Image
@@ -428,14 +512,22 @@ export default function AboutPage() {
           creating lasting impact, inspiring growth, and leading with purpose.”
         </blockquote>
       </div>
-    </div>
+    </motion.div>
 
     {/* CEO & CFO */}
-    <div className="grid md:grid-cols-2 gap-10">
-
+<motion.div
+  className="grid md:grid-cols-2 gap-10"
+  variants={stagger}
+  initial="hidden"
+  whileInView="visible"
+viewport={{ once: false, amount: 0.2 }}
+>
       {/* CEO */}
-      <div className="bg-white rounded-2xl shadow-md p-10 text-center">
-        <div className="w-32 h-32 mx-auto rounded-full bg-slate-100 mb-6 overflow-hidden">
+<motion.div
+  className="bg-white rounded-2xl shadow-md p-10 text-center"
+  variants={fadeUp}
+  whileHover={{ y: -8 }}
+>        <div className="w-32 h-32 mx-auto rounded-full bg-slate-100 mb-6 overflow-hidden">
           <Image
             src="/CEO.jpeg"   // 🔁 replace
             alt="CEO"
@@ -455,11 +547,14 @@ export default function AboutPage() {
           future. As CEO, my purpose is to turn bold ideas into impact and lead
           with vision that uplifts everyone around us.”
         </p>
-      </div>
+      </motion.div>
 
       {/* CFO */}
-      <div className="bg-white rounded-2xl shadow-md p-10 text-center">
-        <div className="w-32 h-32 mx-auto rounded-full bg-slate-100 mb-6 overflow-hidden">
+<motion.div
+  className="bg-white rounded-2xl shadow-md p-10 text-center"
+  variants={fadeUp}
+  whileHover={{ y: -8 }}
+>        <div className="w-32 h-32 mx-auto rounded-full bg-slate-100 mb-6 overflow-hidden">
           <Image
             src="/CFO.jpeg"   // 🔁 replace
             alt="CFO"
@@ -479,9 +574,9 @@ export default function AboutPage() {
           As CFO, I turn numbers into strategy, ensuring every step we take is
           grounded, clear, and future-ready.”
         </p>
-      </div>
+      </motion.div>
 
-    </div>
+    </motion.div>
   </div>
 </section>
 
@@ -537,7 +632,7 @@ export default function AboutPage() {
     {/* RIGHT ILLUSTRATION */}
     <div className="flex justify-center">
       <img
-        src="/paarsh.webp"
+        src="/paarsh.png"
         alt="E-learning benefits"
         className="w-full max-w-xl"
       />
@@ -596,7 +691,7 @@ export default function AboutPage() {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.6 }}
       className="mt-16 flex justify-center"
     >
@@ -618,7 +713,7 @@ export default function AboutPage() {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.5 }}
       className="h-[90px] flex items-center gap-4 p-5 border border-slate-200 rounded-xl bg-white
                  hover:shadow-[0_0_20px_rgba(47,111,122,0.25)]

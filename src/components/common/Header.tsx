@@ -104,7 +104,7 @@ export function Header() {
               <Instagram className="h-4 w-4" />
             </a>
              <a
-              href="https://www.instagram.com/paarsh_elearning/"
+              href="https://www.youtube.com/@paarshinfotech3697"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Youtube"
@@ -161,13 +161,13 @@ export function Header() {
                   </Link>
                 ))}
 
-                <Link
+                {/* <Link
                   href="/dashboard"
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
                 >
                   <LayoutDashboard className="h-5 w-5" />
                   Dashboard
-                </Link>
+                </Link> */}
               </div>
             </SheetContent>
           </Sheet>

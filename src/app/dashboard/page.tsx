@@ -108,7 +108,7 @@ function StudentDashboard() {
                     <TableCell>
                       <div className="font-medium">{course.title}</div>
                     </TableCell>
-                    <TableCell className="hidden md:table-cell">{course.instructor}</TableCell>
+                    {/* <TableCell className="hidden md:table-cell">{course.instructor}</TableCell> */}
                     <TableCell>
                         <div className="flex items-center gap-2">
                             <Progress value={Math.floor(Math.random() * 50) + 25} className="h-2" />

@@ -187,11 +187,12 @@ export default function CourseDetailClient({
   </div>
 
   {/* ===== HERO META BAR ===== */}
-<div className="relative z-30 -mb-16 mt-10">
-<div
-   ref={metaRef}
-   className="mx-auto max-w-6xl rounded-2xl bg-background shadow-lg border border-border px-8 py-6 animate-fadeInUp"
- >
+<div className="relative z-30 -mb-16 mt-10 px-4 sm:px-6">
+  <div
+    ref={metaRef}
+    className="mx-auto max-w-6xl rounded-2xl bg-background shadow-lg border border-border px-6 md:px-8 py-6 animate-fadeInUp"
+  >
+
 
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
 
@@ -367,25 +368,51 @@ export default function CourseDetailClient({
   value={`module-${i}`}
   className="border-none animate-fadeInUp"
   style={{ animationDelay: `${i * 80}ms` }}
->
-              <AccordionTrigger
+><AccordionTrigger
   className="
-    bg-white rounded-xl px-6 py-4 text-left
-    transition-all duration-200
-    hover:bg-accent/50
-    hover:shadow-sm
+    group
+    w-full
+    rounded-2xl
+    border border-border
+    bg-white
+    px-6 py-5
+    text-left
+
+    transition-all duration-300 ease-out
+
+    hover:-translate-y-[2px]
+    hover:border-primary
+    hover:shadow-[0_10px_30px_-12px_theme(colors.primary/40)]
+
+    data-[state=open]:border-primary
+    data-[state=open]:bg-primary/5
+    data-[state=open]:shadow-[0_0_0_3px_theme(colors.primary/20)]
+
     no-underline hover:no-underline
   "
 >
   <div className="flex flex-col">
     {/* Module line */}
-    <span className="text-lg font-semibold text-primary">
-      Module {i + 1}
+ <span
+    className="
+      text-xs text-primary font-semibold uppercase tracking-wider
+      transition-colors
+      group-hover:text-primary
+      data-[state=open]:text-primary
+    "
+  >     Module {i + 1}
     </span>
 
     {/* Title line (below) */}
-    <span className="text-base font-medium text-foreground mt-1">
-      {module.title}
+ <span
+    className="
+      mt-1 text-base font-medium
+      text-foreground
+      transition-colors
+      group-hover:text-primary
+      data-[state=open]:text-primary
+    "
+  >      {module.title}
     </span>
   </div>
 </AccordionTrigger>
@@ -403,8 +430,8 @@ export default function CourseDetailClient({
 
         </div>
       </div>
+     { /* left section */}
 
-      {/* ================= RELATED COURSES (SIDEBAR) ================= */}
       <div className="lg:col-span-4 space-y-6">
 
         
