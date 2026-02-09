@@ -104,7 +104,7 @@ export function Header() {
               <Instagram className="h-4 w-4" />
             </a>
              <a
-              href="https://www.youtube.com/@paarshinfotech3697"
+              href="https://www.youtube.com/@PaarshE-learning"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Youtube"
