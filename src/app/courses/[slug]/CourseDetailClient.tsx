@@ -189,8 +189,7 @@ export default function CourseDetailClient({
   {/* ===== HERO META BAR ===== */}
 <div className="relative z-30 -mb-16 mt-10 px-4 sm:px-6">
   <div
-    ref={metaRef}
-    className="mx-auto max-w-6xl rounded-2xl bg-background shadow-lg border border-border px-6 md:px-8 py-6 animate-fadeInUp"
+    className="mx-auto max-w-6xl rounded-2xl bg-background shadow-lg border border-border px-6 md:px-8 py-6"
   >
 
 
