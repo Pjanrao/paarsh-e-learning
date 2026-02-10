@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Paarsh E-Learning",
     images: [
       {
-        url: "/logo-wide.webp",
+        url: "/wide-logo.png",
         width: 1200,
         height: 630,
         alt: "Paarsh E-Learning",
