@@ -40,7 +40,7 @@ export default function VideoSection() {
               src="/video/how-we-work.mp4"
               controls
               preload="metadata"
-              poster="/video/video-poster.jpg" // optional thumbnail
+              poster="/video/how-we-work.png" // optional thumbnail
             >
               Your browser does not support the video tag.
             </video>

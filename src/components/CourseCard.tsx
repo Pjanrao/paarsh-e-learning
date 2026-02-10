@@ -29,30 +29,42 @@ export function CourseCard({ course }: CourseCardProps) {
           />
         </div>
       </CardHeader>
-      <CardContent className="p-6 flex-grow">
-<CardTitle
-  className="
-    font-headline
-    text-xl
-    leading-snug
-    line-clamp-2
-    min-h-[3.2rem]
-  "
->          {course.title}
+
+      {/* 🔹 Reduce padding on mobile */}
+      <CardContent className="p-4 sm:p-6 flex-grow">
+        {/* 🔹 Course title: smaller on mobile */}
+        <CardTitle
+          className="
+            font-headline
+            text-base sm:text-xl
+            leading-snug
+            line-clamp-2
+            min-h-[2.6rem] sm:min-h-[3.2rem]
+          "
+        >
+          {course.title}
         </CardTitle>
-        {/* <p className="mt-2 text-sm text-muted-foreground">
-          By {course.instructor}
-        </p> */}
-        <div className="mt-4 flex items-center justify-between text-sm">
+
+        {/* 🔹 Rating + Price row */}
+        <div className="mt-3 flex items-center justify-between gap-3 text-sm">
+          {/* Rating */}
           <div className="flex items-center gap-1">
-            <Star className="w-5 h-5 text-accent fill-accent" />
+            <Star className="w-4 h-4 sm:w-5 sm:h-5 text-accent fill-accent" />
             <span className="font-semibold">{course.rating}</span>
-            <span className="text-muted-foreground">({course.reviews})</span>
+            <span className="text-muted-foreground">
+              ({course.reviews})
+            </span>
           </div>
-          <div className="font-bold text-lg text-primary">₹{course.price}</div>
+
+          {/* 🔹 Price: smaller on mobile */}
+          <div className="font-bold text-sm sm:text-lg text-primary">
+            ₹{course.price}
+          </div>
         </div>
       </CardContent>
-      <CardFooter className="p-6 pt-0">
+
+      {/* 🔹 Reduce footer padding on mobile */}
+      <CardFooter className="p-4 sm:p-6 pt-0">
         <Button asChild className="w-full">
           <Link href={`/courses/${course.slug}`}>View Details</Link>
         </Button>

@@ -152,7 +152,8 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
     >
 {/* ================= MOBILE TABS ================= */}
 {/* ================= MOBILE TABS ================= */}
-<TabsList className="grid grid-cols-2 gap-3 bg-transparent md:hidden h-auto">
+  <TabsList className="grid grid-cols-2 gap-3 bg-transparent md:hidden h-auto px-4 sm:px-6">
+
   {mobcategories.map((category) => (
     <TabsTrigger
       key={category}
@@ -160,16 +161,18 @@ export default function AutoCourseTabs({ courses }: { courses: Course[] }) {
       className="p-0 bg-transparent shadow-none"
     >
       <span
-        className={`
-          w-full text-center px-4 py-2 rounded-lg
-          text-sm font-medium transition-all
-          ${
-           activeTab === category
-                    ? "bg-accent text-accent-foreground shadow-md"
-                    : "bg-background text-foreground border border-border hover:bg-muted"
-          }
-        `}
-      >
+  className={`
+    flex items-center justify-center
+    w-full px-4 py-2 rounded-lg
+    text-xs sm:text-sm font-medium text-center
+    transition-all
+    ${
+      activeTab === category
+        ? "bg-accent text-accent-foreground shadow-md"
+        : "bg-background text-foreground border border-border hover:bg-muted"
+    }
+  `}
+>
         {category}
       </span>
     </TabsTrigger>

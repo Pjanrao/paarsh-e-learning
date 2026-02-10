@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetTrigger,
+  SheetTrigger,SheetHeader,SheetTitle
 } from "@/components/ui/sheet";
+import { DialogTitle } from "@radix-ui/react-dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
 import {
   Menu,
   BookCopy,
@@ -20,6 +25,8 @@ import {
   Youtube,
 } from "lucide-react";
 import { Logo } from "./Logo";
+import { useState } from "react";
+
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
@@ -29,6 +36,9 @@ const navLinks = [
 ];
 
 export function Header() {
+
+    const [open, setOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 
@@ -138,7 +148,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <div className="ml-auto flex items-center gap-4">
-          <Sheet>
+<Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
                 <Menu className="h-5 w-5" />
@@ -147,13 +157,22 @@ export function Header() {
             </SheetTrigger>
 
             <SheetContent side="left">
+               <SheetHeader>
+                <VisuallyHidden>
+                <SheetTitle>Mobile Navigation Menu</SheetTitle>
+                </VisuallyHidden>
+            </SheetHeader>
               <div className="flex flex-col gap-6 pt-6">
+                
+               <div onClick={() => setOpen(false)}>
                 <Logo />
+                </div>
 
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
+                    onClick={() => setOpen(false)}
                     className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
                   >
                     <link.icon className="h-5 w-5" />

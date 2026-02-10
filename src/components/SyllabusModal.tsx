@@ -18,39 +18,74 @@ export default function SyllabusModal({
 }) {
   const [loading, setLoading] = useState(false);
   const [phone, setPhone] = useState("");
+const [errors, setErrors] = useState<Record<string, string>>({});
 
+const validateForm = (name: string, email: string, phone: string) => {
+  const newErrors: Record<string, string> = {};
+
+  if (name.trim().length < 3) {
+    newErrors.name = "Name must be at least 3 characters";
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+    newErrors.email = "Enter a valid email address";
+  }
+
+  let digits = phone.replace(/\D/g, "");
+
+  // remove country code 91
+  if (digits.startsWith("91")) {
+    digits = digits.slice(2);
+  }
+
+  if (!/^[6-9]\d{9}$/.test(digits)) {
+    newErrors.phone =
+      "Enter a valid 10-digit mobile number after country code";
+  }
+
+  return newErrors;
+};
   if (!open) return null;
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
+  const formData = new FormData(e.currentTarget);
+  const name = String(formData.get("name") || "");
+  const email = String(formData.get("email") || "");
 
-    try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!,
-        {
-          name,
-          email,
-          phone: `+${phone}`,
-          course: slug,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
+  const validationErrors = validateForm(name, email, phone);
+  setErrors(validationErrors);
 
-      window.open(`/syllabus/${slug}.pdf`, "_blank");
-      onClose();
-    } catch (err) {
-      alert("Failed to send details. Please try again.");
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (Object.keys(validationErrors).length > 0) return;
+
+  setLoading(true);
+
+  try {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!,
+      {
+        name,
+        email,
+        phone: `+${phone}`,
+        course: slug,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    );
+
+    window.open(`/syllabus/${slug}.pdf`, "_blank");
+    setErrors({});
+    setPhone("");
+    onClose();
+  } catch (err) {
+    alert("Failed to send details. Please try again.");
+    console.error(err);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
@@ -69,22 +104,35 @@ export default function SyllabusModal({
 
         <form onSubmit={handleSubmit} className="space-y-4">
 
-          <Input name="name" placeholder="Full Name" required />
-          <Input name="email" type="email" placeholder="Email Address" required />
+<Input name="name" placeholder="Full Name" />
+
+{errors.name && (
+  <p className="text-sm text-red-600">{errors.name}</p>
+)}          <Input name="email" type="email" placeholder="Email Address" />
+
+{errors.email && (
+  <p className="text-sm text-red-600">{errors.email}</p>
+)}
 
           {/* 🌍 ALL COUNTRIES PHONE INPUT */}
-          <PhoneInput
-            country={"in"}
-            value={phone}
-            onChange={setPhone}
-            inputStyle={{
-              width: "100%",
-              height: "42px",
-            }}
-            inputProps={{
-              required: true,
-            }}
-          />
+         <PhoneInput
+  country={"in"}
+  countryCodeEditable={false}
+  value={phone}
+  onChange={(value) => {
+    setPhone(value);
+    setErrors((prev) => ({ ...prev, phone: "" }));
+  }}
+  inputStyle={{
+    width: "100%",
+    height: "42px",
+  }}
+/>
+
+{errors.phone && (
+  <p className="text-sm text-red-600">{errors.phone}</p>
+)}
+
 
          <label className="flex items-start gap-2 text-sm">
   <input

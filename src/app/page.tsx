@@ -714,7 +714,6 @@ export default function Home() {
           { name: "spring", file: "spring-original.svg" },
           { name: "kotlin", file: "kotlin-original.svg" },
           { name: "kubernetes", file: "kubernetes-original.svg" },
-          { name: "amazonwebservices", file: "amazonwebservices-original.svg" }, // FIXED
           { name: "googlecloud", file: "googlecloud-original.svg" },
           { name: "firebase", file: "firebase-plain.svg" }, // FIXED
           { name: "javascript", file: "javascript-original.svg" },

@@ -94,9 +94,22 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>📞 +91 90752 01035</li>
-              <li>📞 +91 98600 98343</li>
-              <li>🕘 10:00 AM – 06:00 PM</li>
+<li>
+      <a
+        href="tel:+919075201035"
+        className="flex items-center gap-2 hover:text-primary"
+      >
+        📞 <span>+91 90752 01035</span>
+      </a>
+    </li>
+ <li>
+      <a
+        href="tel:+919860098343"
+        className="flex items-center gap-2 hover:text-primary"
+      >
+        📞 <span>+91 98600 98343</span>
+      </a>
+    </li>              <li>🕘 10:00 AM – 06:00 PM</li>
               <li>✉ info@paarshelearning.com</li>
             </ul>
           </div>

@@ -587,7 +587,7 @@ export const courses: Course[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 't1',
-    name: 'Rupali Gaikwad',
+    name: 'Priya Gaikwad',
     course: 'Full Stack Web Development',
     quote: 'Paarsh E-learning changed my life. The one-to-one mentorship was a game-changer, and I landed my dream job within a month of completing the course!',
     imageUrl: '/user.png',
@@ -595,7 +595,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 't2',
-    name: 'Harshda Ahire',
+    name: 'Tanvi Sharma',
     course: 'Data Analyst',
     quote: 'The instructors are industry experts who provide invaluable insights. The placement support is top-notch. Highly recommended!',
     imageUrl: '/user.png',
@@ -603,7 +603,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 't3',
-    name: 'Shivani Deshmukh',
+    name: 'Anjali Patil',
     course: 'Flutter Developer',
     quote: 'I went from a complete beginner to a confident designer. The hands-on projects and portfolio reviews were incredibly helpful.',
     imageUrl: '/user.png',
