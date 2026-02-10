@@ -121,7 +121,7 @@ export const courses: Course[] = [
   title: 'API & Automation Testing',
   description:
     'Master API testing, automation frameworks, REST APIs, Postman, Selenium, and automated testing best practices.',
-  imageUrl: '/API & Automation Testing.png',
+  imageUrl: '/api-automation-testing.png',
   imageHint: 'automation testing',
   rating: 4.8,
   reviews: 165,

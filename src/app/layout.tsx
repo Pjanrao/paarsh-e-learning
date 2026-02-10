@@ -7,9 +7,38 @@ import { Footer } from '@/components/common/Footer';
 import "react-phone-input-2/lib/style.css";
 
 export const metadata: Metadata = {
-  title: 'Paarsh E-Learning',
-  description: 'Placement-oriented e-learning platform.',
+  title: {
+    default: "Paarsh E-Learning | Placement-Oriented Courses",
+    template: "%s | Paarsh E-Learning",
+  },
+  description:
+    "Placement-oriented e-learning platform offering industry-ready courses, mentorship, and real-world projects.",
+
+  metadataBase: new URL("https://paarshelearning.com/"),
+
+  openGraph: {
+    title: "Paarsh E-Learning | Placement-Oriented Courses",
+    description:
+      "Placement-oriented e-learning platform offering industry-ready courses, mentorship, and real-world projects.",
+    url: "https://paarshelearning.com/",
+    siteName: "Paarsh E-Learning",
+    images: [
+      {
+        url: "/logo-wide.webp",
+        width: 1200,
+        height: 630,
+        alt: "Paarsh E-Learning",
+      },
+    ],
+    type: "website",
+  },
+
+  icons: {
+    icon: "/app/favicon.ico",
+    apple: "/logo-wide.webp",
+  },
 };
+
 
 export default function RootLayout({
   children,

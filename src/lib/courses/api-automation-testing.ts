@@ -207,5 +207,5 @@ export const apiAutomationTestingCourse: Course = {
     }
   ],
 
-  cardImage: "/API & Automation Testing.png"
+  cardImage: "/api-automation-testing.png"
 };
