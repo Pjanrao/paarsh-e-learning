@@ -30,16 +30,28 @@ export default function EnrollWithEnquiryModal({ courseTitle }: Props) {
 
       {/* Modal */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-lg sm:rounded-2xl">
-          <DialogHeader>
-            <DialogTitle className="text-xl font-headline">
+<DialogContent
+  className="
+    max-w-lg
+    sm:rounded-2xl
+    p-0
+    fixed
+    top-20
+    left-1/2
+    -translate-x-1/2
+    translate-y-0
+    overflow-hidden
+  "
+>
+        <DialogHeader className="px-6 pt-6 pb-2">
+    <DialogTitle className="text-lg font-headline">
               Enquire for {courseTitle}
             </DialogTitle>
           </DialogHeader>
 
-          <div className="mt-4">
-            <EnquiryForm courseTitle={courseTitle} />
-          </div>
+         <div className="px-6 pb-6 max-h-[70vh] overflow-y-auto">
+    <EnquiryForm courseTitle={courseTitle} />
+  </div>
         </DialogContent>
       </Dialog>
     </>

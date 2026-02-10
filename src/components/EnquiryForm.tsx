@@ -6,10 +6,13 @@ import { useToast } from "@/hooks/use-toast";
 
 interface EnquiryFormProps {
   courseTitle: string;
+  onSuccess?: () => void;
 }
 
-export default function EnquiryForm({ courseTitle }: EnquiryFormProps) {
-  const formRef = useRef<HTMLFormElement>(null);
+export default function EnquiryForm({
+  courseTitle,
+  onSuccess,
+}: EnquiryFormProps) {  const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
 
@@ -28,7 +31,12 @@ export default function EnquiryForm({ courseTitle }: EnquiryFormProps) {
      toast({
   title: "Enquiry Sent ✅",
   description: "Our team will contact you shortly.",
+  
 });
+formRef.current?.reset();
+
+
+onSuccess?.();
 
 
       formRef.current?.reset();
