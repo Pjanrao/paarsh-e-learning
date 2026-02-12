@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Paarshe Learning | IT Training India",
     description:
-      "Know more about Paarshe Learning’s mission, vision, and IT training programs across India.",
+      "Know more about Paarshe Learning's mission, vision, and IT training programs across India.",
     images: ["https://paarshelearning.com/og-about.png"],
   },
 
