@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://paarshelearning.com/og-courses.png",
-        width: 930,
+        width: 1200,
         height: 620,
         alt: "Paarsh E-Learning Courses",
       },

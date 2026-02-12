@@ -34,9 +34,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://paarshelearning.com/og-about.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "About Paarshe Learning - IT Training Institute India",
+       
       },
     ],
   },
