@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://paarshelearning.com/about",
+    canonical: "https://paarshelearning.com/about-us",
   },
 
   openGraph: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description:
       "Discover Paarshe Learning's mission, vision, and commitment to delivering high-quality IT and software training across India.",
     url: "https://paarshelearning.com/about-us",
-    siteName: "Paarsh e learning",
+    siteName: "Paarsh E-Learning",
     type: "website",
     images: [
       {
