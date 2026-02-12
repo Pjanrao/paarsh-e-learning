@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://paarshelearning.com/og-about.png",
+        url: "https://paarshelearning.com/og-about.jpeg",
         width: 930,
         height: 630,
         alt: "About Paarshe Learning - IT Training Institute India",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "About Paarshe Learning | IT Training India",
     description:
       "Know more about Paarshe Learning's mission, vision, and IT training programs across India.",
-    images: ["https://paarshelearning.com/og-about.png"],
+    images: ["https://paarshelearning.com/og-about.jpeg"],
   },
 
   robots: {
