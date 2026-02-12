@@ -229,5 +229,41 @@ export const softwareTestingCourse: Course = {
     }
   ],
 
-  cardImage: "/Software Testing.png"
+  cardImage: "/Software Testing.png",
+
+  metaTitle:
+  "Software Testing Course | Manual & Automation Testing Training",
+
+metaDescription:
+  "Join our Software Testing Course and master manual testing, Selenium automation, TestNG, Maven, defect tracking, SDLC, STLC, and real-world QA practices. 100% practical training with interview support.",
+
+keywords: [
+  "Software Testing Course",
+  "Manual Testing Training",
+  "Automation Testing Course",
+  "Selenium Training",
+  "QA Testing Course",
+  "TestNG Maven Training",
+  "Software QA Course",
+  "ISTQB Preparation Course"
+],
+
+canonicalUrl:
+  "https://paarshelearning.com/courses/software-testing",
+
+ogImage: "/Software Testing.png",
+
+structuredData: {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "Software Testing Course",
+  description:
+    "Comprehensive software testing course covering manual testing fundamentals, automation with Selenium, TestNG, Maven, defect tracking, SDLC, STLC, and QA best practices.",
+  provider: {
+    "@type": "Organization",
+    name: "Paarsh Elearning",
+    sameAs: "https://paarshelearning.com",
+  }
+}
+
 };

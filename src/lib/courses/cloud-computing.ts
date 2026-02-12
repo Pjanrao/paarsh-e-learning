@@ -172,5 +172,42 @@ export const cloudComputingCourse: Course = {
     }
   ],
 
-  cardImage: "/Cloud Computing.png"
+  cardImage: "/Cloud Computing.png",
+
+  metaTitle: "Cloud Computing Course | AWS, Azure & DevOps Training",
+
+  metaDescription:
+    "Enroll in our Cloud Computing Course and master AWS, Microsoft Azure, cloud architecture, virtualization, DevOps fundamentals, and deployment strategies with real-world projects. 100% practical training with certification and placement support.",
+
+  keywords: [
+    "Cloud Computing Course",
+    "AWS Training",
+    "Microsoft Azure Course",
+    "Cloud Architecture Training",
+    "DevOps and Cloud Course",
+    "Cloud Certification Training",
+    "Infrastructure as a Service",
+    "Cloud Engineer Training",
+    "Best Cloud Computing Institute",
+    "Cloud Course with Placement"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/cloud-computing",
+
+  ogImage: "/cloud-computing.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Cloud Computing Course",
+    description:
+      "Comprehensive Cloud Computing training covering AWS, Azure, cloud architecture, virtualization, DevOps fundamentals, and real-world deployment projects with certification.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

@@ -210,5 +210,42 @@ export const ethicalHackingCourse: Course = {
     }
   ],
 
-  cardImage: "/Ethical-Hacking .png"
+  cardImage: "/Ethical-Hacking .png",
+
+  metaTitle: "Ethical Hacking Course | Cyber Security & Penetration Testing Training",
+
+  metaDescription:
+    "Join our Ethical Hacking Course and master Cyber Security, Penetration Testing, Network Security, Web Application Security, and vulnerability assessment with real-world labs. 100% practical training with certification and placement support.",
+
+  keywords: [
+    "Ethical Hacking Course",
+    "Cyber Security Training",
+    "Penetration Testing Course",
+    "CEH Training",
+    "Network Security Course",
+    "Web Application Security",
+    "Cyber Security Certification",
+    "Ethical Hacker Training",
+    "Information Security Course",
+    "Best Ethical Hacking Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/ethical-hacking",
+
+  ogImage: "/ethical-hacking.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Ethical Hacking Course",
+    description:
+      "Comprehensive Ethical Hacking and Cyber Security training covering penetration testing, network security, vulnerability assessment, and real-world security labs with certification.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

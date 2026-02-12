@@ -82,129 +82,61 @@ export const machineLearningCourse: Course = {
         "Role of machine learning in AI and data science",
         "Industry applications of machine learning"
       ]
-    },
-    {
-      title: "Mathematics & Statistics for Machine Learning",
-      topics: [
-        "Linear algebra essentials: vectors and matrices",
-        "Probability and statistics fundamentals",
-        "Calculus concepts: gradients and optimization",
-        "Bias-variance tradeoff"
-      ]
-    },
-    {
-      title: "Python Programming & Libraries for ML",
-      topics: [
-        "Python basics for machine learning",
-        "NumPy for numerical computing",
-        "Pandas for data manipulation",
-        "Matplotlib for data visualization",
-        "Introduction to Scikit-learn"
-      ]
-    },
-    {
-      title: "Data Preprocessing & Feature Engineering",
-      topics: [
-        "Data cleaning and handling missing values",
-        "Feature scaling and normalization",
-        "Feature selection techniques",
-        "Feature extraction methods"
-      ]
-    },
-    {
-      title: "Supervised Learning: Regression Methods",
-      topics: [
-        "Simple linear regression",
-        "Multiple linear regression",
-        "Cost functions",
-        "Gradient descent optimization",
-        "Polynomial regression and model tuning"
-      ]
-    },
-    {
-      title: "Supervised Learning: Classification Algorithms",
-      topics: [
-        "Logistic regression",
-        "K-nearest neighbors (KNN)",
-        "Support Vector Machines (SVM)",
-        "Decision trees",
-        "Naive Bayes classification"
-      ]
-    },
-    {
-      title: "Model Evaluation, Validation & Selection",
-      topics: [
-        "Train-test split techniques",
-        "Cross-validation",
-        "Confusion matrix",
-        "Precision, recall, and F1-score",
-        "ROC curve and AUC"
-      ]
-    },
-    {
-      title: "Unsupervised Learning: Clustering Techniques",
-      topics: [
-        "K-means clustering",
-        "Hierarchical clustering",
-        "DBSCAN algorithm",
-        "Cluster validation techniques"
-      ]
-    },
-    {
-      title: "Unsupervised Learning: Dimensionality Reduction",
-      topics: [
-        "Principal Component Analysis (PCA)",
-        "t-SNE and dimensionality reduction techniques",
-        "Curse of dimensionality"
-      ]
-    },
-    {
-      title: "Ensemble Methods & Advanced Supervised Learning",
-      topics: [
-        "Bagging techniques",
-        "Random Forests",
-        "Boosting algorithms",
-        "AdaBoost and Gradient Boosting",
-        "Handling imbalanced datasets"
-      ]
-    },
-    {
-      title: "Introduction to Neural Networks",
-      topics: [
-        "Basics of neural networks",
-        "Perceptrons",
-        "Multi-layer neural networks",
-        "Introduction to deep learning concepts"
-      ]
-    },
-    {
-      title: "Practical Machine Learning Projects & Case Studies",
-      topics: [
-        "Implementing ML models on real datasets",
-        "End-to-end machine learning workflow",
-        "Problem statements and group presentations"
-      ]
-    },
-    {
-      title: "Industry Tools & ML Deployment Basics",
-      topics: [
-        "Using Jupyter Notebook and Google Colab",
-        "Saving and loading trained models",
-        "Basic model deployment concepts",
-        "Overview of cloud platforms and MLOps basics"
-      ]
-    },
-    {
-      title: "Ethics, Challenges & Emerging Trends in ML",
-      topics: [
-        "Ethics in machine learning",
-        "Bias and fairness challenges",
-        "Model explainability",
-        "Emerging trends such as AutoML",
-        "Scalable machine learning systems"
-      ]
     }
   ],
 
-  cardImage: "/machine-learning.png"
+  cardImage: "/machine-learning.png",
+
+  /* =========================
+     ✅ SEO OPTIMIZATION START
+  ========================== */
+
+  metaTitle:
+    "Machine Learning Course in India | Python ML Training & Certification",
+
+  metaDescription:
+    "Enroll in the Machine Learning Course at Paarshe Learning and master Python, Scikit-learn, regression, classification, clustering, and model deployment. Hands-on ML training with real-world projects and certification.",
+
+  keywords: [
+    "Machine Learning Course",
+    "Machine Learning Training in India",
+    "Python Machine Learning Course",
+    "ML Certification Course",
+    "Data Science and Machine Learning",
+    "Supervised Learning Course",
+    "Unsupervised Learning Training",
+    "Scikit Learn Course",
+    "AI and ML Course",
+    "Machine Learning with Python",
+    "ML Course with Projects",
+    "Data Science Institute in India",
+    "ML Training Institute",
+    "Artificial Intelligence Course",
+    "Machine Learning Classes"
+  ],
+
+  canonicalUrl:
+    "https://paarshelearning.com/courses/machine-learning",
+
+  ogImage: "/machine-learning.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Machine Learning Course",
+    description:
+      "Comprehensive Machine Learning training covering Python, supervised and unsupervised learning, model evaluation, and real-world ML projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    },
+    offers: {
+      "@type": "Offer",
+      price: "45000",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock"
+    }
+  }
+
 };

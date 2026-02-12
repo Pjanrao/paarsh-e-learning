@@ -215,5 +215,42 @@ export const digitalMarketingCourse: Course = {
     }
   ],
 
-  cardImage: "/digital-marketing.png"
+  cardImage: "/digital-marketing.png",
+
+  metaTitle: "Digital Marketing Course | SEO, Google Ads, Social Media & PPC Training",
+
+  metaDescription:
+    "Master Digital Marketing with SEO, Google Ads, Social Media Marketing, PPC, Content Marketing, and Analytics. 100% practical training with live projects and certification.",
+
+  keywords: [
+    "Digital Marketing Course",
+    "SEO Training",
+    "Google Ads Course",
+    "Social Media Marketing Training",
+    "PPC Course",
+    "Content Marketing Course",
+    "Digital Marketing Certification",
+    "Online Marketing Course",
+    "Best Digital Marketing Institute",
+    "Digital Marketing Course with Placement"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/digital-marketing",
+
+  ogImage: "/digital-marketing.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Digital Marketing Course",
+    description:
+      "Industry-focused Digital Marketing training covering SEO, SEM, Google Ads, Social Media Marketing, PPC, content marketing, and analytics with real-world projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

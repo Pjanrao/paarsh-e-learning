@@ -52,12 +52,6 @@ import {
   events,
   heroSlides,
 } from '@/lib/data';
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-} from "@/components/ui/tabs";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },

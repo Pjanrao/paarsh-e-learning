@@ -18,6 +18,8 @@ type CourseCardProps = {
 export function CourseCard({ course }: CourseCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-transform transform hover:-translate-y-1 hover:shadow-xl">
+      
+      
       <CardHeader className="p-0">
         <div className="relative aspect-video">
           <Image
@@ -25,14 +27,14 @@ export function CourseCard({ course }: CourseCardProps) {
             alt={course.title}
             fill
             className="object-cover"
-            data-ai-hint={course.imageHint}
           />
         </div>
       </CardHeader>
 
-      {/* 🔹 Reduce padding on mobile */}
-      <CardContent className="p-4 sm:p-6 flex-grow">
-        {/* 🔹 Course title: smaller on mobile */}
+      {/* Content */}
+<CardContent className="p-4 sm:p-6">
+        
+        {/* ✅ Title - Smaller on Mobile */}
         <CardTitle
           className="
             font-headline
@@ -45,10 +47,11 @@ export function CourseCard({ course }: CourseCardProps) {
           {course.title}
         </CardTitle>
 
-        {/* 🔹 Rating + Price row */}
-        <div className="mt-3 flex items-center justify-between gap-3 text-sm">
+        {/* Rating + Price */}
+<div className="mt-3 sm:mt-4 flex items-center justify-between text-xs sm:text-sm">
+          
           {/* Rating */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 text-xs sm:text-sm">
             <Star className="w-4 h-4 sm:w-5 sm:h-5 text-accent fill-accent" />
             <span className="font-semibold">{course.rating}</span>
             <span className="text-muted-foreground">
@@ -56,19 +59,23 @@ export function CourseCard({ course }: CourseCardProps) {
             </span>
           </div>
 
-          {/* 🔹 Price: smaller on mobile */}
-          <div className="font-bold text-sm sm:text-lg text-primary">
+          {/* ✅ Price - Smaller on Mobile + spacing */}
+<div className="font-bold text-sm sm:text-lg text-primary">
             ₹{course.price}
           </div>
         </div>
+
       </CardContent>
 
-      {/* 🔹 Reduce footer padding on mobile */}
-      <CardFooter className="p-4 sm:p-6 pt-0">
+      {/* Footer */}
+<CardFooter className="p-4 pt-0">
         <Button asChild className="w-full">
-          <Link href={`/courses/${course.slug}`}>View Details</Link>
+          <Link href={`/courses/${course.slug}`}>
+            View Details
+          </Link>
         </Button>
       </CardFooter>
+
     </Card>
   );
 }

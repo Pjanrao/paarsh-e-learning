@@ -194,4 +194,40 @@ export const wordpressDevelopmentCourse: Course = {
   ],
 
   cardImage: "/wordpress.png",
+
+  metaTitle:
+  "WordPress Development Course | CMS, Theme & Plugin Training",
+
+metaDescription:
+  "Learn WordPress development from basics to advanced including theme customization, plugin development, PHP, SEO, security, and real-world website projects. Become a job-ready WordPress Developer.",
+
+keywords: [
+  "WordPress Development Course",
+  "WordPress Training",
+  "CMS Development Course",
+  "WordPress Theme Development",
+  "WordPress Plugin Development",
+  "PHP for WordPress",
+  "WooCommerce Course",
+  "WordPress Developer Training"
+],
+
+canonicalUrl:
+  "https://paarshelearning.com/courses/wordpress-development",
+
+ogImage: "/wordpress.png",
+
+structuredData: {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "WordPress Development Course",
+  description:
+    "Comprehensive WordPress development training covering CMS fundamentals, theme and plugin development, PHP integration, SEO, security, and real-world website projects.",
+  provider: {
+    "@type": "Organization",
+    name: "Paarsh Elearning",
+    sameAs: "https://paarshelearning.com",
+  }
+}
+
 };

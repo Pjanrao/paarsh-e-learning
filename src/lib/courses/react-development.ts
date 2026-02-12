@@ -186,5 +186,40 @@ export const reactDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/react.png"
+  cardImage: "/react.png",
+  metaTitle:
+  "React Development Course | React.js Training with Hooks & Projects",
+
+metaDescription:
+  "Join our React Development Course and master React.js, hooks, routing, state management, API integration, performance optimization, testing, and deployment. 100% practical training with real-world projects.",
+
+keywords: [
+  "React Development Course",
+  "React.js Training",
+  "React Hooks Course",
+  "Frontend Development Course",
+  "React with Redux Training",
+  "React Router Course",
+  "React Project Based Learning",
+  "React Developer Training"
+],
+
+canonicalUrl:
+  "https://paarshelearning.com/courses/react-development",
+
+ogImage: "/react.png",
+
+structuredData: {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  name: "React Development Course",
+  description:
+    "Comprehensive React.js course covering hooks, state management, routing, API integration, performance optimization, testing, and deployment with hands-on projects.",
+  provider: {
+    "@type": "Organization",
+    name: "Paarsh elearning",
+    sameAs: "https://paarshelearning.com",
+  }
+}
+
 };

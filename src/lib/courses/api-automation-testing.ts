@@ -207,5 +207,43 @@ export const apiAutomationTestingCourse: Course = {
     }
   ],
 
-  cardImage: "/api-automation-testing.png"
+  cardImage: "/api-automation-testing.png",
+
+  metaTitle: "API & Automation Testing Course | Selenium, Postman, Rest Assured Training",
+
+  metaDescription:
+    "Enroll in our API & Automation Testing Course and gain hands-on experience with Selenium WebDriver, Postman, Rest Assured, Java, TestNG, Maven, Git, and CI/CD tools. Learn through real-world projects and become job-ready for QA Automation and SDET roles.",
+
+  keywords: [
+    "API Testing Course",
+    "Automation Testing Course",
+    "Selenium WebDriver Training",
+    "Postman API Testing Training",
+    "Rest Assured Course",
+    "Java for Automation Testing",
+    "QA Automation Certification",
+    "SDET Course",
+    "Software Testing Training",
+    "CI/CD for Automation Testing",
+    "Automation Framework Course",
+    "Best Automation Testing Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/api-automation-testing",
+
+  ogImage: "/api-automation-testing.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "API & Automation Testing Course",
+    description:
+      "Comprehensive API & Automation Testing training covering Selenium WebDriver, Postman, Rest Assured, Java, TestNG, Maven, Git, and CI/CD integration with real-time projects and placement assistance.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };

@@ -201,5 +201,42 @@ export const dotNetDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/dotnet.png"
+  cardImage: "/dotnet.png",
+
+  metaTitle: ".NET Development Course | ASP.NET Core, C# & Web API Training",
+
+  metaDescription:
+    "Enroll in our .NET Development Course and master C#, ASP.NET Core, Web API, Entity Framework, MVC architecture, and SQL Server with real-world projects. 100% practical training with certification and placement support.",
+
+  keywords: [
+    ".NET Development Course",
+    "ASP.NET Core Training",
+    "C# Programming Course",
+    "Dot Net Web Development",
+    "ASP.NET MVC Course",
+    "Web API Development in .NET",
+    "Entity Framework Training",
+    ".NET Certification Course",
+    "Full Stack .NET Developer Training",
+    "Best .NET Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/dot-net-development",
+
+  ogImage: "/dotnet.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: ".NET Development Course",
+    description:
+      "Comprehensive .NET Development training covering C#, ASP.NET Core, MVC, Web API, Entity Framework, SQL Server, and real-world web application projects with certification.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

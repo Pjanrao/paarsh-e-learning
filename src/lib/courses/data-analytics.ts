@@ -216,5 +216,41 @@ export const dataAnalyticsCourse: Course = {
     }
   ],
 
-  cardImage: "/data-analytics.png"
+  cardImage: "/data-analytics.png",
+  metaTitle: "Data Analytics Course | Excel, SQL, Python, Power BI Training",
+
+  metaDescription:
+    "Enroll in our Data Analytics Course and master Excel, SQL, Python, Power BI, data visualization, and real-world analytics projects. 100% practical training with industry-focused curriculum and placement support.",
+
+  keywords: [
+    "Data Analytics Course",
+    "Data Analyst Training",
+    "Excel for Data Analysis",
+    "SQL Course",
+    "Python for Data Analytics",
+    "Power BI Course",
+    "Data Visualization Training",
+    "Business Analytics Course",
+    "Data Analytics Certification",
+    "Best Data Analytics Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/data-analytics",
+
+  ogImage: "/data-analytics.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Data Analytics Course",
+    description:
+      "Comprehensive Data Analytics training covering Excel, SQL, Python, Power BI, data visualization, and real-world analytics projects designed for aspiring data analysts.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

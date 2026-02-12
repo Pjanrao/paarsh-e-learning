@@ -83,91 +83,61 @@ export const kotlinDevelopmentCourse: Course = {
         "Android project structure",
         "Hello World Android app"
       ]
-    },
-    {
-      title: "Kotlin Fundamentals",
-      topics: [
-        "Overview of Kotlin and features",
-        "Basic syntax, variables, and data types",
-        "Control flow (if/else, loops, when)",
-        "Functions and parameters",
-        "Collections and arrays",
-        "Null safety and exception handling",
-        "Object-oriented programming in Kotlin",
-        "Lambdas and higher-order functions"
-      ]
-    },
-    {
-      title: "Android Framework & App Components",
-      topics: [
-        "Android architecture",
-        "Activities and lifecycle",
-        "Intents and navigation",
-        "Fragments and lifecycle",
-        "Views and ViewGroups",
-        "Layouts using XML and ConstraintLayout"
-      ]
-    },
-    {
-      title: "UI Design & Interaction",
-      topics: [
-        "UI elements (Buttons, TextView, EditText)",
-        "Handling user input and events",
-        "Scrollable lists using RecyclerView",
-        "Menus, dialogs, toasts, and notifications",
-        "Material Design principles"
-      ]
-    },
-    {
-      title: "Data Handling & Storage",
-      topics: [
-        "SharedPreferences",
-        "SQLite basics",
-        "Room persistence library",
-        "JSON parsing",
-        "Data Binding and View Binding"
-      ]
-    },
-    {
-      title: "Networking & APIs",
-      topics: [
-        "RESTful APIs and web services",
-        "Retrofit and OkHttp clients",
-        "Coroutines for asynchronous calls",
-        "Handling API responses and errors"
-      ]
-    },
-    {
-      title: "Advanced Android Concepts",
-      topics: [
-        "Navigation component",
-        "LiveData and ViewModel (MVVM basics)",
-        "Jetpack libraries overview",
-        "Background services",
-        "Notifications and broadcast receivers"
-      ]
-    },
-    {
-      title: "Testing, Debugging & Deployment",
-      topics: [
-        "Debugging techniques",
-        "Unit testing using JUnit",
-        "UI testing with Espresso",
-        "Preparing apps for Google Play release",
-        "App publishing checklist"
-      ]
-    },
-    {
-      title: "Practical & Mini Projects",
-      topics: [
-        "Building and running basic Android apps",
-        "Kotlin control flow and function exercises",
-        "OOP-based Kotlin programs",
-        "RecyclerView and API-based apps",
-        "Mini Android projects using Kotlin and Android SDK"
-      ]
     }
   ],
 
   cardImage: "/kotlin.png",
+
+  /* =========================
+     ✅ SEO OPTIMIZATION START
+  ========================== */
+
+  metaTitle:
+    "Kotlin Development Course in India | Android Kotlin Training & Certification",
+
+  metaDescription:
+    "Enroll in the Kotlin Development Course at Paarshe Learning and master Android app development using Kotlin. Learn Android Studio, Jetpack, MVVM, APIs, and Play Store deployment with hands-on projects and certification.",
+
+  keywords: [
+    "Kotlin Course",
+    "Kotlin Development Training",
+    "Android Kotlin Course",
+    "Kotlin Certification Course",
+    "Android Development with Kotlin",
+    "Kotlin Training in India",
+    "Android App Development Course",
+    "Kotlin Programming Course",
+    "Android Studio Course",
+    "MVVM Android Course",
+    "Jetpack Android Training",
+    "Mobile App Development Course",
+    "Google Play Store Publishing Course",
+    "Kotlin Classes",
+    "Android Developer Training"
+  ],
+
+  canonicalUrl:
+    "https://paarshelearning.com/courses/kotlin-development",
+
+  ogImage: "/kotlin.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Kotlin Development Course",
+    description:
+      "Comprehensive Kotlin training covering Android Studio, Jetpack, MVVM, APIs, and real-world Android app development projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    },
+    offers: {
+      "@type": "Offer",
+      price: "45000",
+      priceCurrency: "INR",
+      availability: "https://schema.org/InStock"
+    }
+  }
+
 };

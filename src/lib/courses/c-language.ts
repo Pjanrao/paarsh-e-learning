@@ -185,5 +185,42 @@ export const cLanguageCourse: Course = {
     }
   ],
 
-  cardImage: "/c-language.png"
+  cardImage: "/c-language.png",
+
+  metaTitle: "C Programming Course | Learn C Language for Beginners & Advanced",
+
+  metaDescription:
+    "Enroll in our C Programming Course and master C language fundamentals, data types, loops, functions, pointers, arrays, structures, and file handling. 100% practical training with real-world programs and projects.",
+
+  keywords: [
+    "C Programming Course",
+    "C Language Course",
+    "Learn C for Beginners",
+    "C Programming Training",
+    "C Language Certification",
+    "Basic to Advanced C Course",
+    "Programming in C",
+    "C Language Institute",
+    "C Course with Projects",
+    "Computer Programming Course"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/c-language",
+
+  ogImage: "/c-language.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "C Programming Course",
+    description:
+      "Comprehensive C Programming training covering fundamentals, loops, functions, pointers, arrays, structures, and real-world programming projects for beginners and advanced learners.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

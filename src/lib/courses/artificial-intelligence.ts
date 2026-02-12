@@ -210,5 +210,44 @@ export const artificialIntelligenceCourse: Course = {
     }
   ],
 
-  cardImage: "/artificial-intelligence.png"
+  cardImage: "/artificial-intelligence.png",
+
+  metaTitle: "Artificial Intelligence Course | AI, Machine Learning & Deep Learning Training",
+
+  metaDescription:
+    "Enroll in our Artificial Intelligence Course and master AI, Machine Learning, Deep Learning, Python, NLP, and real-world AI projects. 100% practical training with industry-focused curriculum and placement support.",
+
+  keywords: [
+    "Artificial Intelligence Course",
+    "AI Course",
+    "Machine Learning Training",
+    "Deep Learning Course",
+    "Python for AI",
+    "NLP Course",
+    "AI Certification",
+    "Data Science and AI Course",
+    "Best AI Training Institute",
+    "AI with Python Course"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/artificial-intelligence",
+
+  ogImage: "/artificial-intelligence.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Artificial Intelligence Course",
+    description:
+      "Comprehensive Artificial Intelligence training covering Machine Learning, Deep Learning, Python, NLP, and real-world AI projects with industry-focused learning and certification.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
+
 };
+
+

@@ -202,5 +202,40 @@ export const fullStackWebDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/full-stack3.png"
+  cardImage: "/full-stack3.png",
+  metaTitle: "Full Stack Web Development Course | MERN Stack & Job Ready Training",
+
+  metaDescription:
+    "Join our Full Stack Web Development Course and master HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Build real-world projects with 100% practical training, certification, and placement support.",
+
+  keywords: [
+    "Full Stack Web Development Course",
+    "MERN Stack Training",
+    "Full Stack Developer Course",
+    "React and Node.js Course",
+    "Web Development Training",
+    "Frontend and Backend Development",
+    "MongoDB Course",
+    "Full Stack Certification",
+    "Job Ready Full Stack Program",
+    "Best Full Stack Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/full-stack-web-development",
+
+  ogImage: "/full-stack3.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Full Stack Web Development Course",
+    description:
+      "Comprehensive Full Stack Web Development training covering HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and real-world projects with certification and placement assistance.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
 };
+

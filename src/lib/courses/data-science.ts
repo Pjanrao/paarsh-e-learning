@@ -33,146 +33,181 @@ export const dataScienceCourse: Course = {
   ],
 
   syllabus: [
-  {
-    title: "Introduction to Data Science",
-    topics: [
-      "What is data science",
-      "Data science lifecycle",
-      "Difference between data analytics & data science",
-      "Applications across industries",
-      "Career paths & roles",
-    ],
-  },
-  {
-    title: "Python Programming for Data Science",
-    topics: [
-      "Python environment setup",
-      "Python syntax & data types",
-      "Control flow & functions",
-      "Working with libraries",
-      "Writing clean, reusable code",
-    ],
-  },
-  {
-    title: "Statistics & Probability",
-    topics: [
-      "Descriptive statistics",
-      "Probability fundamentals",
-      "Data distributions",
-      "Hypothesis testing",
-      "Statistical inference",
-    ],
-  },
-  {
-    title: "Data Collection & Data Wrangling",
-    topics: [
-      "Data sources (CSV, APIs, databases)",
-      "Data cleaning techniques",
-      "Handling missing & noisy data",
-      "Feature transformation",
-      "Data validation",
-    ],
-  },
-  {
-    title: "Exploratory Data Analysis (EDA)",
-    topics: [
-      "Data summarization",
-      "Visualization techniques",
-      "Correlation analysis",
-      "Outlier detection",
-      "Insights generation",
-    ],
-  },
-  {
-    title: "Data Visualization Tools",
-    topics: [
-      "Matplotlib fundamentals",
-      "Seaborn basics",
-      "Plotly overview",
-      "Storytelling with data",
-      "Visualization best practices",
-    ],
-  },
-  {
-    title: "Machine Learning Fundamentals",
-    topics: [
-      "Introduction to machine learning",
-      "Supervised vs unsupervised learning",
-      "Model training workflow",
-      "Bias–variance tradeoff",
-      "Evaluation metrics",
-    ],
-  },
-  {
-    title: "Supervised Learning Algorithms",
-    topics: [
-      "Linear & logistic regression",
-      "Decision trees",
-      "Random forests",
-      "K-Nearest Neighbors",
-      "Model evaluation",
-    ],
-  },
-  {
-    title: "Unsupervised Learning Algorithms",
-    topics: [
-      "Clustering concepts",
-      "K-Means clustering",
-      "Hierarchical clustering",
-      "Dimensionality reduction",
-      "Principal Component Analysis (PCA)",
-    ],
-  },
-  {
-    title: "Feature Engineering & Model Optimization",
-    topics: [
-      "Feature selection",
-      "Feature scaling",
-      "Hyperparameter tuning",
-      "Cross-validation",
-      "Model optimization techniques",
-    ],
-  },
-  {
-    title: "Introduction to Deep Learning",
-    topics: [
-      "Neural network basics",
-      "Activation functions",
-      "Deep learning frameworks overview",
-      "Use cases of deep learning",
-      "Model training basics",
-    ],
-  },
-  {
-    title: "Big Data & Data Science Tools",
-    topics: [
-      "Introduction to big data",
-      "SQL for data science",
-      "Cloud platforms overview",
-      "Data pipelines basics",
-      "Version control with Git",
-    ],
-  },
-  {
-    title: "Ethics, Governance & Deployment",
-    topics: [
-      "Ethical AI & bias",
-      "Data privacy & security",
-      "Model deployment basics",
-      "Monitoring & maintenance",
-      "Responsible AI practices",
-    ],
-  },
-  {
-    title: "Capstone Project & Industry Readiness",
-    topics: [
-      "End-to-end data science project",
-      "Problem formulation",
-      "Model building & evaluation",
-      "Final presentation",
-      "Resume & interview preparation",
-    ],
-  },
-],
+    {
+      title: "Introduction to Data Science",
+      topics: [
+        "What is data science",
+        "Data science lifecycle",
+        "Difference between data analytics & data science",
+        "Applications across industries",
+        "Career paths & roles",
+      ],
+    },
+    {
+      title: "Python Programming for Data Science",
+      topics: [
+        "Python environment setup",
+        "Python syntax & data types",
+        "Control flow & functions",
+        "Working with libraries",
+        "Writing clean, reusable code",
+      ],
+    },
+    {
+      title: "Statistics & Probability",
+      topics: [
+        "Descriptive statistics",
+        "Probability fundamentals",
+        "Data distributions",
+        "Hypothesis testing",
+        "Statistical inference",
+      ],
+    },
+    {
+      title: "Data Collection & Data Wrangling",
+      topics: [
+        "Data sources (CSV, APIs, databases)",
+        "Data cleaning techniques",
+        "Handling missing & noisy data",
+        "Feature transformation",
+        "Data validation",
+      ],
+    },
+    {
+      title: "Exploratory Data Analysis (EDA)",
+      topics: [
+        "Data summarization",
+        "Visualization techniques",
+        "Correlation analysis",
+        "Outlier detection",
+        "Insights generation",
+      ],
+    },
+    {
+      title: "Data Visualization Tools",
+      topics: [
+        "Matplotlib fundamentals",
+        "Seaborn basics",
+        "Plotly overview",
+        "Storytelling with data",
+        "Visualization best practices",
+      ],
+    },
+    {
+      title: "Machine Learning Fundamentals",
+      topics: [
+        "Introduction to machine learning",
+        "Supervised vs unsupervised learning",
+        "Model training workflow",
+        "Bias–variance tradeoff",
+        "Evaluation metrics",
+      ],
+    },
+    {
+      title: "Supervised Learning Algorithms",
+      topics: [
+        "Linear & logistic regression",
+        "Decision trees",
+        "Random forests",
+        "K-Nearest Neighbors",
+        "Model evaluation",
+      ],
+    },
+    {
+      title: "Unsupervised Learning Algorithms",
+      topics: [
+        "Clustering concepts",
+        "K-Means clustering",
+        "Hierarchical clustering",
+        "Dimensionality reduction",
+        "Principal Component Analysis (PCA)",
+      ],
+    },
+    {
+      title: "Feature Engineering & Model Optimization",
+      topics: [
+        "Feature selection",
+        "Feature scaling",
+        "Hyperparameter tuning",
+        "Cross-validation",
+        "Model optimization techniques",
+      ],
+    },
+    {
+      title: "Introduction to Deep Learning",
+      topics: [
+        "Neural network basics",
+        "Activation functions",
+        "Deep learning frameworks overview",
+        "Use cases of deep learning",
+        "Model training basics",
+      ],
+    },
+    {
+      title: "Big Data & Data Science Tools",
+      topics: [
+        "Introduction to big data",
+        "SQL for data science",
+        "Cloud platforms overview",
+        "Data pipelines basics",
+        "Version control with Git",
+      ],
+    },
+    {
+      title: "Ethics, Governance & Deployment",
+      topics: [
+        "Ethical AI & bias",
+        "Data privacy & security",
+        "Model deployment basics",
+        "Monitoring & maintenance",
+        "Responsible AI practices",
+      ],
+    },
+    {
+      title: "Capstone Project & Industry Readiness",
+      topics: [
+        "End-to-end data science project",
+        "Problem formulation",
+        "Model building & evaluation",
+        "Final presentation",
+        "Resume & interview preparation",
+      ],
+    },
+  ],
   cardImage: "/data-science.png",
+  metaTitle: "Best Data Science Course | Python, Machine Learning & AI Training",
+
+  metaDescription:
+    "Join the Best Data Science Course and master Python, Machine Learning, Deep Learning, SQL, and Data Visualization with real-world projects. Industry-focused training with certification and placement support.",
+
+  keywords: [
+    "Data Science Course",
+    "Best Data Science Training",
+    "Python for Data Science",
+    "Machine Learning Course",
+    "AI and Data Science Course",
+    "Data Scientist Certification",
+    "Deep Learning Training",
+    "Data Analytics and Data Science",
+    "Data Science Course with Placement",
+    "Job Ready Data Science Program"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/data-science",
+
+  ogImage: "/data-science.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Data Science Course",
+    description:
+      "Industry-oriented Data Science Course covering Python, Machine Learning, Deep Learning, SQL, statistics, and real-world projects with certification and placement assistance.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };

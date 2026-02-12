@@ -191,5 +191,43 @@ export const frontEndDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/frontend-development.png"
+  cardImage: "/frontend-development.png",
+
+  metaTitle: "Front-End Development Course | HTML, CSS, JavaScript, React Training",
+
+  metaDescription:
+    "Join our Front-End Development Course and master HTML, CSS, JavaScript, React.js, responsive design, and modern UI development. Build real-world projects with 100% practical training, certification, and placement support.",
+
+  keywords: [
+    "Front End Development Course",
+    "HTML CSS JavaScript Course",
+    "React JS Training",
+    "Web Design Course",
+    "Responsive Web Development",
+    "UI Development Course",
+    "JavaScript Certification",
+    "React Developer Training",
+    "Frontend Course with Projects",
+    "Best Frontend Development Institute"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/front-end-development",
+
+  ogImage: "/frontend-development.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Front-End Development Course",
+    description:
+      "Comprehensive Front-End Development training covering HTML, CSS, JavaScript, React.js, responsive design, UI development, and real-world web projects with certification and placement support.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
+
 };
+

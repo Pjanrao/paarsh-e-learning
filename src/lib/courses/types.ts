@@ -26,4 +26,13 @@ export interface Course {
   syllabus: CourseSyllabusModule[];
   
   cardImage: string;
+
+
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  structuredData?: any;
+  
 }

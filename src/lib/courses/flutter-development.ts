@@ -203,5 +203,42 @@ export const flutterDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/flutter.png"
+  cardImage: "/flutter.png",
+  metaTitle: "Flutter Development Course | Dart, Android & iOS App Development Training",
+
+  metaDescription:
+    "Enroll in our Flutter Development Course and master Dart, cross-platform mobile app development, Firebase integration, UI design, and real-world app projects. 100% practical training with certification and placement support.",
+
+  keywords: [
+    "Flutter Development Course",
+    "Flutter App Development Training",
+    "Dart Programming Course",
+    "Android and iOS App Development",
+    "Cross Platform App Development",
+    "Flutter with Firebase",
+    "Mobile App Development Course",
+    "Flutter Certification Course",
+    "Best Flutter Institute",
+    "Flutter Course with Projects"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/flutter-development",
+
+  ogImage: "/flutter.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Flutter Development Course",
+    description:
+      "Comprehensive Flutter Development training covering Dart programming, cross-platform Android and iOS app development, Firebase integration, UI/UX design, and real-world mobile app projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
+
 };
+

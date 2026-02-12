@@ -188,5 +188,42 @@ export const backEndDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/full-stack1.png"
+  cardImage: "/full-stack1.png",
+
+  metaTitle: "Backend Development Course | Node.js, Express, MongoDB & APIs Training",
+
+  metaDescription:
+    "Enroll in our Backend Development Course and master Node.js, Express.js, MongoDB, REST APIs, authentication, and database management. 100% practical training with real-world projects and placement support.",
+
+  keywords: [
+    "Backend Development Course",
+    "Node.js Course",
+    "Express.js Training",
+    "MongoDB Course",
+    "REST API Development",
+    "Server Side Development Course",
+    "Full Stack Backend Training",
+    "API Development Course",
+    "Backend Developer Training",
+    "Web Development Course"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/backend-development",
+
+  ogImage: "/backend-development.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Backend Development Course",
+    description:
+      "Comprehensive Backend Development training covering Node.js, Express.js, MongoDB, REST API development, authentication, and real-world server-side projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

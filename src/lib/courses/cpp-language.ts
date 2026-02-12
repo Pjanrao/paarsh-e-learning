@@ -208,5 +208,42 @@ export const cppLanguageCourse: Course = {
     }
   ],
 
-  cardImage: "/c++.png"
+  cardImage: "/c++.png",
+
+  metaTitle: "C++ Programming Course | Learn C++ for Beginners & Advanced",
+
+  metaDescription:
+    "Enroll in our C++ Programming Course and master object-oriented programming, data structures, STL, pointers, file handling, and real-world C++ projects. 100% practical training with industry-focused curriculum.",
+
+  keywords: [
+    "C++ Programming Course",
+    "C++ Language Course",
+    "Learn C++ for Beginners",
+    "C++ OOP Course",
+    "C++ Training Institute",
+    "Object Oriented Programming in C++",
+    "C++ with Data Structures",
+    "C++ Certification Course",
+    "Programming in C++",
+    "C++ Course with Projects"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/cpp-language",
+
+  ogImage: "/cpp-language.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "C++ Programming Course",
+    description:
+      "Comprehensive C++ Programming training covering object-oriented concepts, STL, data structures, pointers, and real-world projects for beginners and advanced learners.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
+
 };
+

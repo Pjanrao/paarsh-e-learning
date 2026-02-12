@@ -188,5 +188,41 @@ export const dataArchitectureCourse: Course = {
     }
   ],
 
-  cardImage: "/data-science.png"
+  cardImage: "/data-science.png",
+
+  metaTitle: "Data Architecture Course | Data Modeling, Warehousing & Big Data Training",
+
+  metaDescription:
+    "Enroll in our Data Architecture Course and master data modeling, data warehousing, ETL processes, database design, and big data fundamentals. 100% practical training with real-world projects and industry-focused curriculum.",
+
+  keywords: [
+    "Data Architecture Course",
+    "Data Modeling Training",
+    "Data Warehousing Course",
+    "ETL Training",
+    "Big Data Architecture",
+    "Database Design Course",
+    "Data Engineer Training",
+    "Cloud Data Architecture",
+    "Data Management Course",
+    "Enterprise Data Architecture"
+  ],
+
+  canonicalUrl: "https://paarshelearning.com/courses/data-architecture",
+
+  ogImage: "/data-architecture.png",
+
+  structuredData: {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Data Architecture Course",
+    description:
+      "Comprehensive Data Architecture training covering data modeling, data warehousing, ETL processes, database systems, and big data concepts with real-world projects.",
+    provider: {
+      "@type": "Organization",
+      name: "Paarshe Learning",
+      sameAs: "https://paarshelearning.com"
+    }
+  }
 };
+

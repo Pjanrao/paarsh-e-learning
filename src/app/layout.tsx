@@ -7,31 +7,62 @@ import { Footer } from '@/components/common/Footer';
 import "react-phone-input-2/lib/style.css";
 
 export const metadata: Metadata = {
+
+  metadataBase: new URL("https://paarshelearning.com"),
+
   title: {
-    default: "Paarsh E-Learning | Placement-Oriented Courses",
+    default: "Paarsh E-Learning | Placement-Oriented IT & Software Training Courses",
     template: "%s | Paarsh E-Learning",
   },
-  description:
-    "Placement-oriented e-learning platform offering industry-ready courses, mentorship, and real-world projects.",
 
-  metadataBase: new URL("https://paarshelearning.com/"),
+  description:
+    "Paarsh E-Learning offers placement-focused IT courses with one-to-one mentorship, real-world projects, and structured interview preparation.",
+
+  keywords: [
+    "Paarsh E-Learning",
+    "IT Training Institute Pune",
+    "Data Science Course",
+    "Full Stack Development",
+    "AI & Machine Learning",
+    "Placement Oriented Courses",
+    "Software Training Pune",
+  ],  
+
+   alternates: {
+    canonical: "https://paarshelearning.com/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
 
   openGraph: {
-    title: "Paarsh E-Learning | Placement-Oriented Courses",
+    title: "Paarsh E-Learning | Career-Focused IT Courses",
     description:
-      "Placement-oriented e-learning platform offering industry-ready courses, mentorship, and real-world projects.",
+      "Join Paarsh E-Learning for industry-ready programs with 1:1 mentorship and placement support.",
     url: "https://paarshelearning.com/",
     siteName: "Paarsh E-Learning",
+    locale: "en_IN",
     images: [
       {
         url: "/parshlearning.png",
-        width: 600,
-        height: 100,
+        width: 1200,
+        height: 320,
         alt: "Paarsh E-Learning",
       },
     ],
     type: "website",
   },
+
+  //  twitter: {
+  //   card: "summary_large_image",
+  //   title: "Paarsh E-Learning | Placement-Oriented Courses",
+  //   description:
+  //     "Career-focused IT programs with mentorship and real-world projects.",
+  //   images: ["/parshlearning.png"],
+  // },
 
   icons: {
     icon: "/app/favicon.ico",
@@ -64,6 +95,24 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
+
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      name: "Paarsh E-Learning",
+      url: "https://paarshelearning.com",
+      logo: "https://paarshelearning.com/parshlearning.png",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Pune",
+        addressCountry: "IN",
+      },
+    }),
+  }}
+/>
       </body>
     </html>
   );
