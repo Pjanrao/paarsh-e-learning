@@ -25,7 +25,7 @@ const slides = [
   {
     title: "Full Stack Development",
     subtitle: "Frontend. Backend. Deployment.",
-    link: "/courses/full-stack",
+    link: "/courses/full-stack-web-development",
   },
   {
     title: "Data Science & Analytics",
