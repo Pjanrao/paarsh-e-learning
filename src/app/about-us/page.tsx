@@ -31,12 +31,8 @@ export const metadata: Metadata = {
     url: "https://paarshelearning.com/about-us",
     siteName: "Paarsh E-Learning",
     type: "website",
-    images: [
-      {
-        url: "https://paarshelearning.com/og-about.jpeg",
-       
-      },
-    ],
+    images: ["https://paarshelearning.com/og-about.jpeg"],
+
   },
 
   twitter: {
