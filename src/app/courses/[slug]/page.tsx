@@ -1,21 +1,70 @@
 import { notFound } from "next/navigation";
 import { CourseSlug, coursesMap } from "@/lib/courses";
 import CourseDetailClient from "./CourseDetailClient";
+import type { Metadata } from "next";
+
 
 interface PageProps {
-  params: Promise<{
-    slug: CourseSlug;
-  }>;
+  params: {
+    slug: string;
+  };
 }
 
-export default async function CourseDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+export async function generateMetadata(
+  { params }: PageProps
+): Promise<Metadata> {
+
+  const slug = params.slug as keyof typeof coursesMap;
+  const course = coursesMap[slug];
+
+  if (!course) {
+    return {
+      title: "Course Not Found",
+    };
+  }
+return {
+    title: course.metaTitle,
+    description: course.metaDescription,
+    keywords: course.keywords,
+    alternates: {
+      canonical: course.canonicalUrl,
+    },
+    openGraph: {
+      title: course.metaTitle,
+      description: course.metaDescription,
+      url: course.canonicalUrl,
+      siteName: "Paarshe Learning",
+      images: [
+        {
+          url: course.cardImage ?? "/default-og.png",
+          width: 1200,
+          height: 630,
+          alt: course.title,
+        },
+      ],
+      locale: "en_IN",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: course.metaTitle,
+      description: course.metaDescription,
+      images: [course.cardImage ?? "/default-og.png"],
+    },
+  };
+}
+
+export default function CourseDetailPage({ params }: PageProps) {
+
+  const slug = params.slug as keyof typeof coursesMap;
   const course = coursesMap[slug];
 
   if (!course) return notFound();
 
-return <CourseDetailClient course={course} slug={slug} />;
+  return <CourseDetailClient course={course} slug={slug} />;
 }
+
+
 
 
 
