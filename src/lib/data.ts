@@ -345,7 +345,7 @@ export const courses: Course[] = [
   title: 'Java Full Stack Development (Core Java, Spring Boot & Enterprise Apps)',
   description:
     'Become a Java full-stack developer by mastering Core Java, Spring Boot, REST APIs, databases, and enterprise application development.',
-  imageUrl: '/java-full.png',
+  imageUrl: '/java-fullstack.png',
   imageHint: 'java full stack',
   rating: 4.9,
   reviews: 210,
@@ -571,7 +571,7 @@ export const courses: Course[] = [
   id: 'c41',
   title: 'Python Programming Language (Core Python & Automation)',
   description:'Learn core Python programming concepts and automation techniques for real-world applications.',
-  imageUrl: '/python-core.png',
+  imageUrl: '/python.png',
   imageHint: 'python programming',
   rating: 4.6,
   reviews: 140,

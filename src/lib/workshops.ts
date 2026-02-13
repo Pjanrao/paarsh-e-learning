@@ -1,4 +1,3 @@
-// src/lib/workshops.ts
 
 export const workshops = {
   "data-science": {
@@ -109,5 +108,40 @@ export const workshops = {
     ],
 
     brochurePdf: "/brochures/ai-ml.pdf",
+
+    metaTitle:
+  "Technical Workshops | Hands-on Industry Training Programs",
+
+metaDescription:
+  "Join our industry-focused technical workshops designed to provide practical learning, hands-on sessions, and real-world exposure across trending technologies and career domains.",
+
+keywords: [
+  "Technical Workshops",
+  "Industry Training Workshop",
+  "College Workshops",
+  "Hands-on Learning Programs",
+  "Technology Workshops",
+  "Career Development Workshop",
+  "Practical Training Event"
+],
+
+canonicalUrl:
+  "https://paarshelearning.com/workshops",
+
+ogImage: "/workshops-banner.png",
+
+structuredData: {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Technical Workshop",
+  description:
+    "Hands-on technical workshop designed to provide practical exposure, industry insights, and career guidance in emerging technologies.",
+  organizer: {
+    "@type": "Organization",
+    name: "Paarsh Elearning",
+    url: "https://paarshelearning.com"
+  }
+}
+
   },
 };

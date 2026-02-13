@@ -175,7 +175,7 @@ export const tableauCourse: Course = {
     }
   ],
 
-  cardImage: "/tableau.png",
+  cardImage: "/table.png",
   metaTitle:
   "Tableau Course | Data Visualization & Business Intelligence Training",
 
@@ -196,7 +196,7 @@ keywords: [
 canonicalUrl:
   "https://paarshelearning.com/courses/tableau-data-visualization",
 
-ogImage: "/tableau.png",
+ogImage: "/table.png",
 
 structuredData: {
   "@context": "https://schema.org",

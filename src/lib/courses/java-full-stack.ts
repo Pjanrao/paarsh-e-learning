@@ -190,7 +190,7 @@ export const javaFullStackDevelopmentCourse: Course = {
     }
   ],
 
-  cardImage: "/java-full.png",
+  cardImage: "/java-fullstack.png",
 
    metaTitle: "Java Full Stack Development Course | Spring Boot, React, SQL Training in India",
 
@@ -217,8 +217,7 @@ keywords: [
 
 canonicalUrl: "https://paarshelearning.com/courses/java-full-stack-development",
 
-ogImage: "/java-full.png",
-
+ogImage: "/java-fullstack.png",
 structuredData: {
   "@context": "https://schema.org",
   "@type": "Course",
