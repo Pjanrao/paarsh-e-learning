@@ -36,7 +36,7 @@ return {
       siteName: "Paarshe Learning",
       images: [
         {
-          url: course.cardImage ?? "/default-og.png",
+          url: `https://paarshelearning.com${course.cardImage ?? "/og-courses.png"}`,
           width: 1200,
           height: 630,
           alt: course.title,
@@ -49,7 +49,7 @@ return {
       card: "summary_large_image",
       title: course.metaTitle,
       description: course.metaDescription,
-      images: [course.cardImage ?? "/default-og.png"],
+      images: [`https://paarshelearning.com${course.cardImage ?? "/og-courses.png"}`],
     },
   };
 }
