@@ -33,9 +33,11 @@ const [phone, setPhone] = useState("");
     newErrors.name = "Name must be at least 3 characters";
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    newErrors.email = "Enter a valid email address";
-  }
+  const emailRegex =
+  /^[a-zA-Z0-9]+([._%+-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+if (!emailRegex.test(email)) {
+  newErrors.email = "Enter a valid email address";
+}
   
 // PHONE VALIDATION
 let phoneValue = phone.replace(/\D/g, "");
@@ -92,7 +94,11 @@ if (!phoneValue.startsWith(COUNTRY_CODE)) {
       setErrors({});
     })
     .catch((error) => {
-      console.error("EmailJS Error:", error);
+       console.error("EmailJS FULL ERROR:", {
+    status: error?.status,
+    text: error?.text,
+    error,
+  });
       toast({
         title: "Failed to send message ❌",
         description: "Please try again after some time.",

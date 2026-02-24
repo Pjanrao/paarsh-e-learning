@@ -49,8 +49,6 @@ interface CourseOverviewItem {
 }
 
 
-
-
 export default function CourseDetailClient({
   course,
   slug,

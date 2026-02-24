@@ -73,18 +73,133 @@ export const machineLearningCourse: Course = {
   ],
 
   syllabus: [
-    {
-      title: "Introduction to Machine Learning",
-      topics: [
-        "What is machine learning and its applications",
-        "Types of learning: supervised and unsupervised",
-        "Brief introduction to reinforcement learning",
-        "Role of machine learning in AI and data science",
-        "Industry applications of machine learning"
-      ]
-    }
-  ],
-
+  {
+    title: "Introduction to Artificial Intelligence",
+    topics: [
+      "What is AI, history, and evolution",
+      "AI goals and major applications",
+      "Types of AI: narrow, general, and superintelligence",
+      "Overview of intelligent agents and problem-solving"
+    ]
+  },
+  {
+    title: "Mathematical Foundations for AI",
+    topics: [
+      "Linear algebra basics: vectors and matrices",
+      "Calculus essentials for optimization",
+      "Probability and statistics for uncertainty",
+      "Mathematical logic and reasoning"
+    ]
+  },
+  {
+    title: "Programming for AI (Python & Libraries)",
+    topics: [
+      "Python syntax and data types",
+      "Key AI libraries: NumPy, Pandas, Matplotlib",
+      "Working with Jupyter Notebook and Google Colab",
+      "Basics of Scikit-learn for model building"
+    ]
+  },
+  {
+    title: "Data Preprocessing & Feature Engineering",
+    topics: [
+      "Data cleaning: handling missing values and outliers",
+      "Feature scaling and transformation",
+      "Encoding categorical variables",
+      "Handling imbalanced datasets"
+    ]
+  },
+  {
+    title: "Machine Learning Fundamentals",
+    topics: [
+      "Overview of machine learning and its role in AI",
+      "Types of learning: supervised, unsupervised, and reinforcement learning",
+      "Model training basics",
+      "Evaluation metrics for machine learning models"
+    ]
+  },
+  {
+    title: "Supervised Learning Techniques",
+    topics: [
+      "Regression algorithms: linear and logistic regression",
+      "Classification techniques: SVM, decision trees, KNN",
+      "Model validation techniques",
+      "Performance metrics and optimization"
+    ]
+  },
+  {
+    title: "Unsupervised & Reinforcement Learning",
+    topics: [
+      "Clustering algorithms: K-means and hierarchical clustering",
+      "Dimensionality reduction using PCA",
+      "Reinforcement learning basics",
+      "Applications of reinforcement learning"
+    ]
+  },
+  {
+    title: "Deep Learning & Neural Networks",
+    topics: [
+      "Perceptrons and multilayer neural networks",
+      "Convolutional Neural Networks (CNNs)",
+      "Recurrent Neural Networks (RNNs)",
+      "Activation functions and optimization techniques"
+    ]
+  },
+  {
+    title: "Natural Language Processing (NLP)",
+    topics: [
+      "Text preprocessing: tokenization and stemming",
+      "Language models and word embeddings",
+      "Sentiment analysis",
+      "Sequence modeling techniques"
+    ]
+  },
+  {
+    title: "Computer Vision",
+    topics: [
+      "Image processing fundamentals",
+      "Object detection techniques",
+      "Image classification methods",
+      "CNN applications in computer vision"
+    ]
+  },
+  {
+    title: "AI Ethics, Bias & Responsible AI",
+    topics: [
+      "Ethical considerations in AI design",
+      "Bias, fairness, and transparency",
+      "Privacy and accountability",
+      "AI governance and regulations"
+    ]
+  },
+  {
+    title: "AI Tools, Frameworks & Platforms",
+    topics: [
+      "TensorFlow basics",
+      "PyTorch fundamentals",
+      "Model training tools and supporting libraries",
+      "Cloud services for AI: AWS, Azure, and GCP"
+    ]
+  },
+  {
+    title: "Applications of AI in Industry",
+    topics: [
+      "AI in healthcare, finance, retail, and agriculture",
+      "Autonomous systems and robotics",
+      "AI in real-time decision systems",
+      "Emerging AI industry trends"
+    ]
+  },
+  {
+    title: "AI Capstone Project & Deployment",
+    topics: [
+      "End-to-end AI project development",
+      "Data collection, modeling, and evaluation",
+      "Model deployment using Flask, Docker, or Cloud",
+      "Final presentation and industry-level project report"
+    ]
+  }
+],
   cardImage: "/machine-learning.png",
 
   /* =========================

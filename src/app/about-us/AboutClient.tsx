@@ -95,7 +95,7 @@ viewport={{ once: false, amount: 0.2 }}
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-xl mt-8">
 
   <div className="border rounded-xl p-4 text-center hover:shadow-md transition">
-    <p className="text-[#2f6f7a] font-bold text-2xl">5000+</p>
+    <p className="text-[#2f6f7a] font-bold text-2xl">500+</p>
     <p className="text-sm text-slate-600">Students Trained</p>
   </div>
 

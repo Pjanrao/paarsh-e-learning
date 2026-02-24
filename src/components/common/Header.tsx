@@ -59,7 +59,7 @@ export function Header() {
 
             <a
               href="mailto:info@paarshelearning.com"
-              className="flex items-center gap-1 hover:underline"
+              className="flex items-center gap-1"
             >
               <Mail className="h-4 w-4" />
               <span className="hidden sm:inline">

@@ -750,7 +750,7 @@ export default function Home() {
 
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="section-tight">
+        {/* <section id="testimonials" className="section-tight">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-headline font-bold">
@@ -808,12 +808,134 @@ export default function Home() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious variant="default" className="ml-12" />
-                <CarouselNext variant="default" className="mr-12" />
+                <CarouselPrevious
+  variant="default"
+  className="flex lg:hidden ml-4"
+/>
+<CarouselNext
+  variant="default"
+  className="flex lg:hidden mr-4"
+/>
+                {testimonials.length > 3 && (
+  <>
+    <CarouselPrevious
+      variant="default"
+      className="hidden lg:flex ml-12"
+    />
+    <CarouselNext
+      variant="default"
+      className="hidden lg:flex mr-12"
+    />
+  </>
+)}
+
               </Carousel>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {/* Testimonials Section */}
+<section id="testimonials" className="section-tight">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-3xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-headline font-bold">
+        What Our Students Say
+      </h2>
+      <p className="mt-4 text-lg text-muted-foreground">
+        Success stories from our alumni who have transformed their careers.
+      </p>
+    </div>
+
+    {/* Add relative + side padding for outside arrows */}
+<div className="mt-12 relative px-8 md:px-16 overflow-visible">      
+  <Carousel
+        opts={{ align: "start" }}
+        className="w-full"
+      >
+        <CarouselContent>
+          {testimonials.map((testimonial) => (
+            <CarouselItem
+              key={testimonial.id}
+              className="md:basis-1/2 lg:basis-1/3"
+            >
+              <div className="p-1 h-full">
+                <Card className="h-full flex flex-col justify-between">
+                  <CardContent className="pt-6">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-5 w-5 text-accent fill-accent"
+                        />
+                      ))}
+                    </div>
+
+                    <blockquote className="mt-4 text-muted-foreground">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </CardContent>
+
+                  <CardHeader className="flex-row items-center gap-4">
+                    <Image
+                      src={testimonial.imageUrl}
+                      alt={testimonial.name}
+                      width={48}
+                      height={48}
+                      className="rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-semibold">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.course}
+                      </p>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+
+        {/* Small Outside Arrows */}
+        {testimonials.length > 1 && (
+          <>
+            <CarouselPrevious
+              variant="default"
+              className="
+                absolute
+                -left-2 md:-left-6
+                top-1/2 -translate-y-1/2
+                h-8 w-8
+                rounded-full
+                shadow-md
+                bg-white
+                hover:bg-primary hover:text-white
+                transition
+              "
+            />
+
+            <CarouselNext
+              variant="default"
+              className="
+                absolute
+                -right-2 md:-right-6
+                top-1/2 -translate-y-1/2
+                h-8 w-8
+                rounded-full
+                shadow-md
+                bg-white
+                hover:bg-primary hover:text-white
+                transition
+              "
+            />
+          </>
+        )}
+      </Carousel>
+    </div>
+  </div>
+</section>
         
 <section className="section-compact bg-background pb-12 md:pb-16">
   <div className="container mx-auto px-4">

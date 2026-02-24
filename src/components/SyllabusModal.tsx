@@ -27,9 +27,12 @@ const validateForm = (name: string, email: string, phone: string) => {
     newErrors.name = "Name must be at least 3 characters";
   }
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-    newErrors.email = "Enter a valid email address";
-  }
+ const emailRegex =
+  /^[a-zA-Z0-9]+([._%+-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
+
+if (!emailRegex.test(email)) {
+  newErrors.email = "Enter a valid email address";
+}
 
   let digits = phone.replace(/\D/g, "");
 
