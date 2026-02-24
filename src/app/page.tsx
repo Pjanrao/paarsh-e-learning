@@ -847,8 +847,8 @@ export default function Home() {
     </div>
 
     {/* Add relative + side padding for outside arrows */}
-<div className="mt-12 relative px-8 md:px-16 overflow-visible">      
-  <Carousel
+<div className="mt-12 relative px-12 md:px-20 overflow-visible">
+    <Carousel
         opts={{ align: "start" }}
         className="w-full"
       >
@@ -897,41 +897,69 @@ export default function Home() {
             </CarouselItem>
           ))}
         </CarouselContent>
+{/* Mobile Arrows - Outside Card */}
+<CarouselPrevious
+  className="
+    flex lg:hidden
+    absolute
+    -left-4
+    top-1/2 -translate-y-1/2
+    h-9 w-9
+    rounded-full
+    bg-white
+    shadow-lg
+    border border-gray-200
+    z-20
+  "
+/>
+
+<CarouselNext
+  className="
+    flex lg:hidden
+    absolute
+    -right-4
+    top-1/2 -translate-y-1/2
+    h-9 w-9
+    rounded-full
+    bg-white
+    shadow-lg
+    border border-gray-200
+    z-20
+  "
+/>
 
         {/* Small Outside Arrows */}
-        {testimonials.length > 1 && (
-          <>
-            <CarouselPrevious
-              variant="default"
-              className="
-                absolute
-                -left-2 md:-left-6
-                top-1/2 -translate-y-1/2
-                h-8 w-8
-                rounded-full
-                shadow-md
-                bg-white
-                hover:bg-primary hover:text-white
-                transition
-              "
-            />
+       {testimonials.length > 3 && (
+  <>
+    {/* Desktop Arrows */}
+    <CarouselPrevious
+      className="
+        hidden lg:flex
+        absolute -left-10
+        top-1/2 -translate-y-1/2
+        h-11 w-11
+        rounded-full
+        bg-white
+        shadow-xl
+        z-10
+      "
+    />
 
-            <CarouselNext
-              variant="default"
-              className="
-                absolute
-                -right-2 md:-right-6
-                top-1/2 -translate-y-1/2
-                h-8 w-8
-                rounded-full
-                shadow-md
-                bg-white
-                hover:bg-primary hover:text-white
-                transition
-              "
-            />
-          </>
-        )}
+    <CarouselNext
+      className="
+        hidden lg:flex
+        absolute -right-10
+        top-1/2 -translate-y-1/2
+        h-11 w-11
+        rounded-full
+        bg-white
+        shadow-xl
+        z-10
+      "
+    />
+  </>
+)}
+
       </Carousel>
     </div>
   </div>
