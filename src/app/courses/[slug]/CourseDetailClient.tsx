@@ -124,7 +124,7 @@ export default function CourseDetailClient({
       </ul>
 
       {/* Meta Info */}
-      <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted-foreground">
+      {/* <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
           <Clock className="h-4 w-4 text-primary" />
                           {course.duration}
@@ -138,7 +138,7 @@ export default function CourseDetailClient({
           <Award className="h-4 w-4 text-primary" />
           Placement Focused
         </div>
-      </div>
+      </div> */}
 
       {/* CTAs */}
       <div className="mt-8 flex flex-wrap gap-4">
