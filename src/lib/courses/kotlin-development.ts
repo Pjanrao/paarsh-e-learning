@@ -73,18 +73,102 @@ export const kotlinDevelopmentCourse: Course = {
   ],
 
   syllabus: [
-    {
-      title: "Introduction & Setup",
-      topics: [
-        "Course overview and objectives",
-        "Android ecosystem and market overview",
-        "Installing Java JDK and Android Studio",
-        "SDK and environment setup",
-        "Android project structure",
-        "Hello World Android app"
-      ]
-    }
-  ],
+  {
+    title: "1. Introduction & Setup",
+    topics: [
+      "Course Overview & Objectives",
+      "Android Ecosystem & Market Overview",
+      "Installing Tools: Java JDK / Android Studio",
+      "SDK & Environment Setup",
+      "First Android Project: Project Structure",
+      "First Android Project: Hello World App"
+    ]
+  },
+  {
+    title: "2. Kotlin Fundamentals",
+    topics: [
+      "Overview of Kotlin & Features",
+      "Basic Syntax, Variables & Data Types",
+      "Control Flow (if/else, loops, when)",
+      "Functions & Parameters",
+      "Collections & Arrays",
+      "Null Safety & Exception Handling",
+      "OOP in Kotlin (Classes, Objects, Inheritance, Interfaces)",
+      "Lambdas & Higher-Order Functions"
+    ]
+  },
+  {
+    title: "3. Android Framework & App Components",
+    topics: [
+      "Android Architecture",
+      "Activities & Lifecycle",
+      "Intents & Navigation",
+      "Fragments & Lifecycle",
+      "Views & ViewGroups",
+      "Layouts (XML & ConstraintLayout)"
+    ]
+  },
+  {
+    title: "4. UI Design & Interaction",
+    topics: [
+      "UI Elements (Buttons, TextViews, EditTexts)",
+      "Handling User Input & Events",
+      "Scrollable Lists (RecyclerView)",
+      "Menus, Dialogs, Toasts & Notifications",
+      "Material Design Principles"
+    ]
+  },
+  {
+    title: "5. Data Handling & Storage",
+    topics: [
+      "SharedPreferences",
+      "SQLite Basics",
+      "Room Persistence Library",
+      "JSON Parsing",
+      "Data Binding & View Binding"
+    ]
+  },
+  {
+    title: "6. Networking & APIs",
+    topics: [
+      "RESTful APIs & Web Services",
+      "Retrofit & OkHttp Clients",
+      "Coroutines for Async Calls",
+      "Handling Responses & Errors"
+    ]
+  },
+  {
+    title: "7. Advanced Android Concepts",
+    topics: [
+      "Navigation Component",
+      "LiveData & ViewModel (MVVM Basics)",
+      "Jetpack Libraries Overview",
+      "Background Services",
+      "Notifications & Broadcast Receivers"
+    ]
+  },
+  {
+    title: "8. Testing, Debugging & Deployment",
+    topics: [
+      "Debugging Techniques",
+      "Unit Testing (JUnit)",
+      "UI Testing (Espresso)",
+      "Preparing for Google Play Release",
+      "App Publishing Checklist"
+    ]
+  },
+  {
+    title: "Practical Implementation",
+    topics: [
+      "Writing, compiling, and running basic Rust programs",
+      "Variables, data types, mutability, and control flow exercises",
+      "Functions, modules, and ownership–borrowing based programs",
+      "Structs, enums, traits, and implementation blocks",
+      "Error handling, generics, collections, and file I/O programs",
+      "Mini projects using Rust standard library and advanced features"
+    ]
+  }
+],
 
   cardImage: "/kotlin.png",
 
