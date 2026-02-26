@@ -267,16 +267,16 @@ export default function CourseDetailClient({
 <div
   ref={enrollRef}
   className="sticky top-32 w-full max-w-sm rounded-2xl border border-border bg-background shadow-lg p-5 animate-fadeInUp"
->  <p className="text-xs uppercase tracking-wide text-muted-foreground">
-    Course Fee
+>  <div className="mb-4">
+  <p className="text-muted-foreground">
+    Limited Seats Available
   </p>
 
-  <p className="mt-2 text-3xl font-bold text-primary">
-    ₹{course.fee}
-    <span className="ml-1 text-sm font-normal text-muted-foreground">
-      / Full Course
-    </span>
+  <p className="mt-2 text-lg font-semibold text-primary">
+    Next Batch Starting Soon
   </p>
+</div>
+
 
   <EnrollWithEnquiryModal courseTitle={course.title} />
 
