@@ -36,7 +36,7 @@ const slides = [
 
 export default function TechCoursesBanner() {
   return (
-<section className="relative w-full h-[220px] md:h-[250px] overflow-hidden 
+<section className="relative w-full min-h-[220px] md:h-[250px] 
 bg-gradient-to-br from-[#e6f4f5] via-white to-[#f0f7f8]">
       <div className="container mx-auto px-8 lg:px-12 max-w-7xl h-full">
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center h-full">
