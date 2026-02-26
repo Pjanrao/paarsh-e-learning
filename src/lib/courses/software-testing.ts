@@ -14,7 +14,7 @@ export const softwareTestingCourse: Course = {
     "The program also introduces automation testing with Selenium, TestNG, and Maven, along with optional exposure to SQL and API testing, preparing candidates for QA and software testing roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

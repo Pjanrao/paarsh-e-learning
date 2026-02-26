@@ -14,7 +14,7 @@ export const phpWebDevelopmentCourse: Course = {
     "With hands-on exercises, practical projects, and best practices, students gain the skills required to build scalable PHP applications and prepare for backend or full-stack web development roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

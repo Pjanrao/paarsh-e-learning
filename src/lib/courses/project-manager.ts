@@ -14,7 +14,7 @@ export const projectManagerCourse: Course = {
     "The program focuses on real-world project scenarios, industry tools, and capstone simulations to prepare learners for Project Manager, Scrum Master, and PMO roles."
   ],
 
-  duration: "4–6 Months",
+  duration: "6 Months",
 
   benefits: [
     {

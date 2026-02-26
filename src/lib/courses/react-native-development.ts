@@ -14,7 +14,7 @@ export const reactNativeDevelopmentCourse: Course = {
     "With hands-on mini projects and a complete end-to-end mobile application, learners gain the confidence to design, develop, test, and deploy Android apps using React Native."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

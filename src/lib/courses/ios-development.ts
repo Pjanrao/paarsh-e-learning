@@ -14,7 +14,7 @@ export const iosDevelopmentCourse: Course = {
     "The program emphasizes best practices, performance, security, testing, and App Store deployment, preparing students for professional iOS developer roles."
   ],
 
-  duration: "5–6 Months",
+  duration: "6 Months",
 
   benefits: [
     {

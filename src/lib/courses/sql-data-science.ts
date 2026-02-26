@@ -14,7 +14,7 @@ export const sqlForDataScienceCourse: Course = {
     "By the end of the program, students will be able to write optimized SQL queries, build analytical datasets, and integrate SQL outputs with visualization and data science workflows."
   ],
 
-  duration: "2–3 Months",
+  duration: "6 Months",
 
   benefits: [
     {

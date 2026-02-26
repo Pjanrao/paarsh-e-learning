@@ -416,7 +416,7 @@ export const courses: Course[] = [
   title: 'PHP Web Development (Core PHP, MySQL & Web Applications)',
   description:
     'Learn Core PHP, MySQL, and web application development to build dynamic, database-driven websites.',
-  imageUrl: '/php.png',
+  imageUrl: '/php-web.png',
   imageHint: 'php web development',
   rating: 4.6,
   reviews: 140,

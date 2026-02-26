@@ -14,7 +14,7 @@ export const generativeAICourse: Course = {
     "The program emphasizes hands-on projects, ethical AI practices, real-world use cases, and deployment strategies to prepare learners for GenAI and AI product roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

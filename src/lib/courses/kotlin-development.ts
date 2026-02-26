@@ -14,7 +14,7 @@ export const kotlinDevelopmentCourse: Course = {
     "With hands-on labs, real-world Android use cases, and deployment guidance, this program prepares learners for Android Developer roles using Kotlin."
   ],
 
-  duration: "5–6 Months",
+  duration: "6 Months",
 
   benefits: [
     {

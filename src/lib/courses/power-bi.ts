@@ -14,7 +14,7 @@ export const powerBiCourse: Course = {
     "The program focuses on real-world analytics use cases, performance optimization, collaboration through Power BI Service, and end-to-end dashboard projects to make learners job-ready for BI and data analyst roles."
   ],
 
-  duration: "3–4 Months",
+  duration: "6 Months",
 
   benefits: [
     {

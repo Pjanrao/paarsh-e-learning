@@ -154,6 +154,14 @@ html {
   animation: fadeUp 0.8s ease-out both;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities;

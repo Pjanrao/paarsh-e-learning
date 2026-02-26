@@ -14,7 +14,7 @@ export const rustProgrammingCourse: Course = {
     "With practical exercises, mini projects, and a capstone application, learners will be prepared for roles involving system programming, backend services, high-performance applications, and modern software development using Rust."
   ],
 
-  duration: "3–4 Months",
+  duration: "6 Months",
 
   benefits: [
     {

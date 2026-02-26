@@ -14,7 +14,7 @@ export const nlpWithDeepLearningCourse: Course = {
     "The program emphasizes hands-on projects, real-world NLP tasks, deployment practices, and ethical considerations, preparing learners for NLP and AI engineering roles."
   ],
 
-  duration: "5–6 Months",
+  duration: "6 Months",
 
   benefits: [
     {

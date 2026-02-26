@@ -14,7 +14,7 @@ export const gameDevelopmentCourse: Course = {
     "The course emphasizes practical development, optimization, testing, and portfolio-ready capstone projects to prepare learners for careers in the game industry."
   ],
 
-  duration: "5–6 Months",
+  duration: "6 Months",
 
   benefits: [
     {

@@ -14,7 +14,7 @@ export const networkSecurityCourse: Course = {
     "The program emphasizes practical tools, hands-on labs, incident response basics, and real-world case studies, preparing learners for network security and cybersecurity roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

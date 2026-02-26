@@ -14,7 +14,7 @@ export const wordpressDevelopmentCourse: Course = {
     "Instructor-led live sessions, practical assignments, real-world projects, and interview preparation ensure learners are job-ready for WordPress Developer, Web Developer, and Freelance roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

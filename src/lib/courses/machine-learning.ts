@@ -14,7 +14,7 @@ export const machineLearningCourse: Course = {
     "The course emphasizes real-world datasets, model evaluation, ethical considerations, and deployment basics, preparing learners for ML, data science, and AI-focused roles."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

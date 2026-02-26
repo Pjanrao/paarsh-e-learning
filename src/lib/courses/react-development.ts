@@ -14,7 +14,7 @@ export const reactDevelopmentCourse: Course = {
     "The course emphasizes hands-on projects and real-world practices, preparing learners for front-end and full-stack React developer roles."
   ],
 
-  duration: "3–4 Months",
+  duration: "6 Months",
 
   benefits: [
     {

@@ -14,7 +14,7 @@ export const mobileAppDevelopmentCourse: Course = {
     "With hands-on projects, real-world use cases, and live app deployment, this course prepares learners for careers as Android Developers, iOS Developers, or Mobile Application Engineers."
   ],
 
-  duration: "6–7 Months",
+  duration: "6 Months",
 
   benefits: [
     {

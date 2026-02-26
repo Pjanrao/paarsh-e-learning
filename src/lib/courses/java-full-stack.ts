@@ -14,7 +14,7 @@ export const javaFullStackDevelopmentCourse: Course = {
     "The program focuses heavily on hands-on labs, real-world projects, and full stack integration, preparing learners for enterprise Java developer and full stack developer roles."
   ],
 
-  duration: "6–8 Months",
+  duration: "6 Months",
 
   benefits: [
     {

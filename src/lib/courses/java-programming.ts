@@ -14,7 +14,7 @@ export const javaProgrammingCourse: Course = {
     "The course emphasizes hands-on coding, problem-solving, and real-world use cases, preparing learners for Java Developer roles and backend development careers."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

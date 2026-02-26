@@ -14,7 +14,7 @@ export const tableauCourse: Course = {
     "Instructor-led live sessions, mini projects, and a capstone dashboard project ensure learners are job-ready for roles such as Data Analyst, BI Analyst, and Reporting Analyst."
   ],
 
-  duration: "2–3 Months",
+  duration: "6 Months",
 
   benefits: [
     {

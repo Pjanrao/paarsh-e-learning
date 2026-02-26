@@ -14,7 +14,7 @@ export const uiUxDesignCourse: Course = {
     "The program takes students from fundamentals to advanced UX strategy and portfolio development, preparing them for UI/UX designer roles across industries."
   ],
 
-  duration: "4–5 Months",
+  duration: "6 Months",
 
   benefits: [
     {

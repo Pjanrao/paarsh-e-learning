@@ -14,7 +14,7 @@ export const chatGPTForScrumMastersCourse: Course = {
     "The program emphasizes ethical AI usage, prompt engineering, real-world Agile scenarios, and tool integration, helping Scrum Masters become more effective facilitators and leaders."
   ],
 
-  duration: "2–3 Months",
+  duration: "6 Months",
 
   benefits: [
     {

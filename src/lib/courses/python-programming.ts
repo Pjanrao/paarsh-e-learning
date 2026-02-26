@@ -14,7 +14,7 @@ export const pythonProgrammingCourse: Course = {
     "With a strong focus on applied Python, automation scripting, and mini projects, this program prepares learners for roles in software development, automation, data handling, and scripting-based problem solving."
   ],
 
-  duration: "3–4 Months",
+  duration: "6 Months",
 
   benefits: [
     {
