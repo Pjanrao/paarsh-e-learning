@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { Button } from "@/components/ui/button";
@@ -65,22 +64,28 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   setLoading(true);
 
   try {
-    await emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!,
-      {
+    const res = await fetch("/api/download-syllabus", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         name,
         email,
         phone: `+${phone}`,
         course: slug,
-      },
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-    );
+      }),
+    });
 
+    if (!res.ok) throw new Error("Failed");
+
+    // open syllabus after successful email
     window.open(`/syllabus/${slug}.pdf`, "_blank");
+
     setErrors({});
     setPhone("");
     onClose();
+
   } catch (err) {
     alert("Failed to send details. Please try again.");
     console.error(err);

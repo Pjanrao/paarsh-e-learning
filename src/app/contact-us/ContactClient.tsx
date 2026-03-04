@@ -1,6 +1,5 @@
 "use client";
 
-import emailjs from "emailjs-com";
 import { useState, useRef } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -61,7 +60,7 @@ if (!phoneValue.startsWith(COUNTRY_CODE)) {
   return newErrors;
 };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   if (!formRef.current) return;
@@ -69,46 +68,50 @@ if (!phoneValue.startsWith(COUNTRY_CODE)) {
   const validationErrors = validateForm(formRef.current);
   setErrors(validationErrors);
 
-  if (Object.keys(validationErrors).length > 0) {
-    return; // ⛔ stop submission
-  }
+  if (Object.keys(validationErrors).length > 0) return;
 
   setLoading(true);
 
-  emailjs
-    .sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID!,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    )
-    .then(() => {
-      toast({
-        title: "Message sent ✅",
-        description:
-          "Thank you for contacting Paarsh E-Learning. We’ll get back to you soon.",
-      });
+  const formData = new FormData(formRef.current);
 
-      formRef.current?.reset();
-      setPhone("");
-      setErrors({});
-    })
-    .catch((error) => {
-       console.error("EmailJS FULL ERROR:", {
-    status: error?.status,
-    text: error?.text,
-    error,
-  });
-      toast({
-        title: "Failed to send message ❌",
-        description: "Please try again after some time.",
-        variant: "destructive",
-      });
-    })
-    .finally(() => setLoading(false));
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: `+${phone}`,
+    message: formData.get("message"),
+  };
+
+  try {
+    const res = await fetch("/api/contactusform", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) throw new Error("Failed");
+
+    toast({
+      title: "Message sent ✅",
+      description:
+        "Thank you for contacting Paarsh E-Learning. We’ll get back to you soon.",
+    });
+
+    formRef.current.reset();
+    setPhone("");
+    setErrors({});
+
+  } catch (error) {
+    toast({
+      title: "Failed to send message ❌",
+      description: "Please try again after some time.",
+      variant: "destructive",
+    });
+  } finally {
+    setLoading(false);
+  }
 };
-
-
   return (
 <div className="container mx-auto px-4 pt-8 pb-16 md:pt-10 md:pb-20">
       <div className="text-center max-w-3xl mx-auto">

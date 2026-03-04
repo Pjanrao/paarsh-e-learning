@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -71,12 +70,26 @@ if (!emailRegex.test(email)) {
   setLoading(true);
 
   try {
-    await emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_ENQUIRY_TEMPLATE_ID!,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    );
+    const formData = new FormData(formRef.current);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: `+${phone}`,
+      college: formData.get("college"),
+      education: formData.get("education"),
+      course: courseTitle,
+    };
+
+    const res = await fetch("/api/enquiry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) throw new Error();
 
     toast({
       title: "Enquiry Sent ✅",
@@ -87,6 +100,7 @@ if (!emailRegex.test(email)) {
     setPhone("");
     setErrors({});
     onSuccess?.();
+
   } catch (err) {
     toast({
       variant: "destructive",
