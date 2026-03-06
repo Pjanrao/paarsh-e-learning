@@ -1,4 +1,4 @@
- import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
 import type { Course } from "@/types";
@@ -21,7 +21,7 @@ export function CourseCard({ course }: CourseCardProps) {
 
       {/* ===== Image Section ===== */}
       <CardHeader className="p-0">
-<div className="relative aspect-video">
+        <div className="relative aspect-video">
           {/* Image */}
           <Image
             src={course.imageUrl}
@@ -42,7 +42,7 @@ export function CourseCard({ course }: CourseCardProps) {
       </CardHeader>
 
       {/* ===== Content ===== */}
-        <CardContent className="p-3 sm:p-6 flex flex-col flex-grow">
+      <CardContent className="p-3 sm:p-6 flex flex-col flex-grow">
 
         {/* Title */}
         <CardTitle
@@ -62,22 +62,19 @@ export function CourseCard({ course }: CourseCardProps) {
           {course.description}
         </p>
 
-     {/* Duration + Certificate */}
-  <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 items-center justify-between text-xs sm:text-sm">
+        {/* Duration + Certificate */}
+        <div className="flex flex-col md:flex-row md:items-center md:gap-4 gap-2 mt-3">
 
-  {/* Duration with icon */}
-  <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full">
-    <span className="text-gray-600">⏳</span>
-    <span className="font-medium text-gray-800">
-      {course.duration}
-    </span>
+  <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-700">
+    <span>⏳</span>
+    <span>{course.duration}</span>
   </div>
 
-  {/* Industry Certificate Badge */}
-    <div className="flex items-center gap-1 bg-gray-100 text-yellow-800 px-3 py-1 rounded-full font-medium shadow-sm">
-      <span>🏆</span>
-      <span>Certified</span>
-    </div>
+  <div className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-700">
+    <span>🏆</span>
+    <span>Certified</span>
+  </div>
+
 </div>
 
       </CardContent>
